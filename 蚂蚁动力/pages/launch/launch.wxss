@@ -1,0 +1,71 @@
+/* pages/launch/launch.wxss */
+.woap{
+  width: 96%;
+  margin: 50rpx auto;
+  font-size: 28rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.lst{
+  width: 100%;
+  height: 110rpx;
+  border-bottom: 1rpx solid #eee;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lst input{
+  width: 80%;
+}
+.lst image{
+  width: 0rpx;
+  height: 0rpx;
+  margin-left: 10rpx;
+}
+.lst view{
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+.tiile{
+  width: 35%;
+  margin-left: 20rpx;
+}
+.btn{
+  width: 80%;
+  height: 80rpx;
+  margin: auto;
+  margin-top: 150rpx;
+  background: linear-gradient(180deg, #FF6464 0%, #CE1616 100%);
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pick{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.botom{
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+}

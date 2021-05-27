@@ -1,0 +1,73 @@
+/* pages/goodcourse/goodcourse.wxss */
+.van-tab--active{
+  font-size: 32rpx !important;
+  font-weight: bold !important;
+}
+.van-tabs__line{
+  display: none !important;
+}
+.own{
+  width: 90%;
+  margin: auto;
+}
+.eve{
+  width: 100%;
+  margin: auto;
+}
+.list{
+  width: 90%;
+  margin: auto;
+}
+.eve{
+  width: 100%;
+  margin: 30rpx auto;
+}
+.eve image{
+  width: 100%;
+  height: 280rpx;
+  border-radius: 20rpx;
+}
+.title{
+  width: 92%;
+  margin: auto;
+  font-size: 32rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #0C0C0C;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+.title text{
+  width: 100%;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.desc{
+  width: 92%;
+  margin: auto;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #0C0C0C;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.end{
+  width: 100%;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #666666;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 90rpx 0;
+}

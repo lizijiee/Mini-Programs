@@ -1,0 +1,16 @@
+<!--pages/map/map.wxml-->
+<view class="seach">
+  <input type="text" bindinput="vmodel" placeholder="精准搜索"></input>
+  <button bindtap="searchAddress">搜索</button>
+</view>
+<view class="sac" wx:if="{{show}}">
+    <view wx:for="{{searchList}}" bindtap="selectAddress" data-data="{{item}}">{{item.title}}</view>
+  </view>
+
+  <view class="opcity"></view>
+  <map id="map" longitude="{{ longitude }}" latitude="{{ latitude }}" markers="{{ markers }}" bindtap="maptap" bindregionchange="regionChange" bindmarkertap="markertap" show-location style="width:100vw; height: 100vh;">
+    <cover-view class="zuobiao">
+      <cover-image class="image" src="../../image/icon/zuobiao.png"></cover-image>
+    </cover-view>
+  </map>
+  <view class="btn" bindtap="save">确定</view>

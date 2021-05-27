@@ -1,0 +1,42 @@
+<!--pages/info/estimate/estimate.wxml-->
+<wxs src='../../../utils/filter.wxs' module="filter"></wxs>
+<view class="woap" wx:if="{{show == null}}">
+  <view class="item">
+    <view class="left">
+      <image src="{{filter.url(item.course_pic)}}"></image>
+    </view>
+    <view class="right">
+      <view class="title">{{item.course_name}}</view>
+      <view class="name">{{item.coach_name}}教练</view>
+      <view>
+        <van-rate value="{{ value }}" bind:change="onChange" 
+        color="#EDC86A"/>
+      </view>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view class="int">
+    <textarea name="" id="" class="names" placeholder='请对课程和教练进行评价。' maxlength='{{-1}}' bindinput='onchange' value="{{input}}"></textarea>
+
+    <view class="img" bindtap="choseimg">
+      <text wx:if="{{!image}}">添加照片</text>
+      <image src="{{filter.url(image)}}" wx:else></image>
+    </view>
+  </view>
+
+  <view class="btns" bindtap="seve">发布评论</view>
+
+</view>
+  <!-- 发布成功 -->
+  <view wx:if="{{show == 0}}" class="chang">
+    <image src="../../../image/icon/cheng.png"></image>
+    <view class="tit">评价成功</view>
+    <view class="btn" bindtap="bark">返回我的课程</view>
+  </view>
+   <!-- 发布失败 -->
+   <view wx:if="{{show == 1}}" class="chang">
+    <image src="../../../image/icon/shib.png"></image>
+    <view class="tit">评价失败</view>
+    <view class="ain" bindtap="again">重新评价</view>
+    <view class="bark" bindtap="home">返回首页</view>
+  </view>

@@ -1,0 +1,41 @@
+/* pages/dehshar/details/details.wxss */
+
+.woap{
+  width: 100%;
+  overflow: hidden;
+}
+.title{
+  width: 92%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 36rpx;
+  margin: auto;
+  margin-top: 30rpx;
+  font-weight: bold;
+  color: #222;
+  /* border-bottom: 1rpx solid #ccc; */
+}
+.time{
+  width: 92%;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #666;
+  margin: auto;
+}
+.desc{
+  width: 92%;
+  font-size: 28rpx;
+  color: #666;
+  margin: auto;
+  margin-top: 15rpx;
+}
+.fenm{
+  width: 92%;
+  margin: 15rpx auto;
+}
+.fenm image{
+  width: 100%;
+}

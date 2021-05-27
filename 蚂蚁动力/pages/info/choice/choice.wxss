@@ -1,0 +1,84 @@
+/* pages/launch/launch.wxss */
+.woap {
+  width: 96%;
+  margin: 50rpx auto;
+  font-size: 28rpx;
+}
+
+.lst {
+  width: 100%;
+  height: 110rpx;
+  border-bottom: 1rpx solid #eee;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lst input {
+  width: 80%;
+}
+
+.lst image {
+  width: 18rpx;
+  height: 16rpx;
+  margin-left: 10rpx;
+}
+
+.lst view {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.class_type {
+  width: 100%;
+  height: 110rpx;
+  border-bottom: 1rpx solid #eee;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.class_type >view {
+  width: 60%;
+}
+
+.tiile {
+  margin-left: 20rpx;
+}
+
+.btn {
+  width: 80%;
+  height: 80rpx;
+  margin: auto;
+  margin-top: 115rpx;
+  background: linear-gradient(180deg, #FF6464 0%, #CE1616 100%);
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.protocol{
+  margin-top: 35rpx;
+}
+.protocol text{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.pick {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.botom {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+}

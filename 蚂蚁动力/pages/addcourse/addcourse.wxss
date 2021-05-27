@@ -1,0 +1,147 @@
+/* pages/addcourse/addcourse.wxss */
+.kong{
+  width: 100%;
+  height: 200rpx;
+}
+.woap{
+  width: 90%;
+  margin: 10rpx auto;
+}
+.seach{
+  width: 90%;
+  height: 76rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 38rpx;
+  border: 2rpx solid #979797;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.van-dropdown-menu{
+  box-shadow:none !important;
+}
+.seach image{
+  width: 28rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+}
+.seach input{
+  display: block;
+  width: 70%;
+  height: 100%;
+  font-size: 24rpx;
+}
+.eve{
+  width: 100%;
+  margin: 34rpx auto;
+
+}
+.ae{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left{
+  width: 35%;
+  height: 160rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.left image{
+  width: 100%;
+  height: 100%;
+}
+.right{
+  width:60%;
+}
+.top{
+  width: 100%;
+  height: 60rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #0C0C0C;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top text{
+  font-size: 32rpx;
+  color: #000;
+}
+.top view{
+  color: #666;
+  font-size: 28rpx;
+}
+.top view text{
+  color: red;
+}
+.time{
+  font-size: 26rpx;
+  color: #666;
+  height: 70rpx;
+  display: flex;
+}
+.botom{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.botom text{
+  margin: 0 10rpx;
+}
+.botom text:nth-child(1){
+  width: 88rpx;
+  background: linear-gradient(136deg, #FF5555 0%, #FF841D 100%);
+  border-radius: 16rpx;
+  font-size: 24rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .botom text:nth-child(2){
+  width: 88rpx;
+  background: linear-gradient(139deg, #FE5838 0%, #FF2020 100%);
+  border-radius: 16rpx;
+  font-size: 24rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;/*超出部分隐藏*/
+ 
+/* }  */
+.botom text:nth-child(2){
+  width: 100rpx;
+  background: linear-gradient(165deg, #46B0FF 0%, #4ECDFF 100%);
+  border-radius: 16rpx;
+  font-size: 24rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.botom text:nth-child(3){
+  width: 80rpx;
+  background: linear-gradient(165deg, #46B0FF 0%, #4ECDFF 100%);
+  border-radius: 16rpx;
+  font-size: 24rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headimg{
+  width: 100%;
+  margin-top:20rpx ;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.headimg image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin: 0 10rpx;
+}

@@ -1,0 +1,26 @@
+<!--pages/huo/info/info.wxml-->
+<view class="title">请填写加入拼课所需信息</view>
+<view class="woap">
+  <view>
+    <text>姓名：</text>
+    <input type="text" value="{{name}}" placeholder="请输入孩子姓名" bindinput="names"/>
+  </view>
+  <!-- <view>
+    <text>年龄：</text>
+    <input type="text" value="{{age}}" placeholder="请输入孩子年龄" bindinput="ages"/>
+  </view> -->
+  <!-- <view>
+    <text>身份证：</text>
+    <input type="text" value="{{code}}" placeholder="请输入孩子身份证号码" bindinput="codes"/>
+  </view> -->
+  <view>
+    <text>电话：</text>
+    <input type="text" value="{{tel}}" placeholder="请输入家长联系电话" bindinput="tels"/>
+  </view>
+  <view>
+    <text>验证码：</text>
+    <input type="text" style="width:30%" value="{{numcode}}" placeholder="请输入验证码" bindinput="numcode"/>
+    <text style="width:40%" bindtap="getcode">{{timecode}}</text>
+  </view>
+</view>
+<view class="btn" bindtap="addh">加入拼课</view>

@@ -1,0 +1,26 @@
+<!--pages/dehshar/dehshar.wxml-->
+<tab active='{{3}}'></tab>
+<wxs src="../../utils/filter.wxs" module="filter" />
+<view class="woap">
+  <!-- 文章列表 -->
+  <view class="eve" wx:for="{{list}}" wx:key='index' bindtap="tonath" data-id="{{item.id}}">
+    <!-- 图片 -->
+    <view class="left">
+      <image src='{{filter.url(item.share_pic)}}' mode="aspectFill"></image>
+    </view>
+    <!-- 内容 --> 
+    <view class="right">
+      <view class="title"><text>{{item.share_title}}</text><text>{{item.addtime}}</text></view>
+      <view class="desc">{{item.share_descrip}}</view>
+      <view class="icon">
+        <!-- <image src="../../image/icon/sharing.png"></image> -->
+        <image src="../../image/icon/zan.png" wx:if="{{item.is_thumbsup == 0}}" catchtap="dianz" data-sharid="{{item.id}}"></image>
+        <image src="../../image/icon/zan_s.png" wx:if="{{item.is_thumbsup == 1}}" catchtap="dianz" data-sharid="{{item.id}}"></image>
+        <text>{{item.thumbsup_num}}人</text>
+      </view>
+    </view>
+  </view>
+  <view class="kong"></view>
+<!-- 发布 -->
+<view class="issue" bindtap="issue">发布</view>
+</view>

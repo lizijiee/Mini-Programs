@@ -1,0 +1,86 @@
+<!--pages/home/home.wxml-->
+<tab active='{{0}}'></tab>
+<wxs src="../../utils/filter.wxs" module="filter" />
+<!-- 导航栏 -->
+<view class="navs">
+  <view class="ation" bindtap="showPopup">
+    <text bindtap="getlocation">{{place}}</text>
+    <image src="../../image/icon/bottom.png"></image>
+  </view>
+</view>
+<!-- <view>
+  <official-account  bindload="bindload"
+    binderror="binderror"></official-account>
+</view> -->
+<view class="woap">
+  <!-- 头部 -->
+  <view class="head">
+    <!-- 头像 -->
+    <view class="headimg">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <!-- 登记名称 -->
+    <view class="name">
+      <text wx:if="{{!show}}">{{user.nickname}}</text>
+      <!-- <text wx:if="{{!show}}">学习达人</text> -->
+      <text wx:if="{{show}}" bindtap="login">未登录</text>
+    </view>
+    <!-- 搜索框 -->
+    <view class="seach">
+      <image src="../../image/icon/search.png"></image>
+      <input type="text" placeholder="输入地区或课程关键词" value="{{input}}" bindinput="change" bindconfirm='seach' />
+      <scroll-view scroll-y class="lists" wx:if="{{shows}}">
+        <text wx:for="{{seachlist}}" wx:key='index' bindtap="kec" data-id="{{item.id}}">{{item.course_name}}</text>
+      </scroll-view>
+    </view>
+    <!-- 发起拼课 -->
+    <view class="int" bindtap="navpk">
+      <image src="../../image/icon/initiate.png"></image>
+      <text>发起拼课</text>
+    </view>
+  </view>
+  <!-- banner_swiper -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{swiper}}" wx:key='index'>
+      <swiper-item bindtap="swiper" data-id="{{item.id}}" data-type="{{item.type}}">
+        <image src="{{filter.url(item.carousel_img)}}" class="slide-image" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 新人好礼 -->
+  <view class="newuser" bindtap="xinren">
+    <image src="../../image/icon/newuser.png"></image>
+  </view>
+  <!-- 选项卡 -->
+  <!-- <view class="display">
+  <image src="{{item}}" wx:for="{{display}}" wx:key='index'></image>
+</view> -->
+  <!-- 信息 -->
+  <view class="culum">
+    <view class="title"><text>精选课程</text>
+      <image src="../../image/icon/homezuan.png" mode="aspectFill"></image>
+    </view>
+    <!-- 主体信息 -->
+    <view class="eves">
+      <view class="eve" wx:for='{{list}}' wx:key='index' bindtap="todeta" data-id="{{item.id}}">
+        <view class="baer">
+          <image src='{{filter.url(item.course_pic)}}'></image>
+          <!-- <text>{{item.course_name}}</text> -->
+        </view>
+        <text class="desc">{{item.course_descrip}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="kong"></view>
+</view>
+
+
+
+<van-popup show="{{ ressshow }}" z-index='{{9999}}' bind:close="onClose" custom-style='border-radius: 20rpx;'>
+  <scroll-view scroll-y class="mains">
+    <view bindtap="dqcut">当前位置</view>
+    <view wx:for="{{resslist}}" wx:key='index' bindtap="cut" data-item="{{item}}">
+      {{item.address}}
+    </view>
+  </scroll-view>
+</van-popup>

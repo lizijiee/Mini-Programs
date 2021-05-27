@@ -1,0 +1,42 @@
+<!--pages/info/info/info.wxml-->
+<view class="woap">
+  <!-- 家长信息 -->
+  <view class="patriarch">
+    <view class="title">家长信息</view>
+    <!-- <view class="xinx">
+        <text>城市</text>
+        <input type="text" placeholder="请选择地址" disabled bindtap='xzadd' value="{{city}}"/>
+    </view> -->
+    <view class="xinx">
+        <text>联系方式</text>
+        <input type="number" placeholder="请输入手机号" maxlength="11" bindinput="phone" 
+        value="{{phone}}"/>
+    </view>
+    <view class="xinx" wx:if="{{show}}">
+        <text>验证码</text>
+        <input type="number" placeholder="请输入验证码" class="code" maxlength="6" bindinput="code" 
+        value="{{code}}"/>
+       <view bindtap="getcode">{{timecode}}</view>
+    </view>
+  </view>
+  <!-- 儿童信息 -->
+  <view class="patriarch">
+    <view class="title">儿童信息</view>
+    <view class="xinx">
+        <text>姓名</text>
+        <input type="text" placeholder="请输入真实姓名" bindinput="name" 
+        value="{{name}}"/>
+    </view>
+    <view class="xinx">
+        <text>身份证号码</text>
+        <input type="text" placeholder="请输入身份证号码" maxlength="18" bindinput="idnumber" 
+        value="{{idnumber}}"/>
+    </view>
+    <view class="xinx">
+        <text>孩子性别</text>
+        <input type="text" placeholder="请输入性别" bindinput="age" 
+        value="{{age}}"/>
+    </view>
+  </view>
+  <view class="btn" bindtap="save">保存</view>
+</view>

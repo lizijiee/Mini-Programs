@@ -1,0 +1,51 @@
+/* pages/info/resslist/resslist.wxss */
+.woap{
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #f1f1f1;
+}
+.woap view{
+  width: 90%;
+  height: 80rpx;
+  margin: 30rpx auto;
+  border-radius: 20rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+.woap view text{
+  font-size: 26rpx;
+  color: #999;
+  display: block;
+  width: 90%;
+  padding-left: 20rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.btn{
+  width: 80%;
+  height: 68rpx;
+  margin: auto;
+  background: linear-gradient(360deg, #F23232 0%, #F21E1E 55%, #FF7979 100%);
+  border-radius: 20rpx;
+  margin-top: 100rpx;
+  color: #fff;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 100rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.evs{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}

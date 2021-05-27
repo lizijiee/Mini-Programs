@@ -1,0 +1,48 @@
+<!--pages/huo/huo.wxml-->
+<!--pages/goodcourse/details/details.wxml-->
+<wxs src="../../utils/filter.wxs" module="filter" />
+<view class="woap" style="{{'background:'+data.sign_color}}">
+  <view class="main">
+    <!-- banner -->
+    <view class="banner">
+      <image src="{{filter.url(data.sign_pic)}}"></image>
+    </view>
+    <view class="price_wrapper">
+      <!-- title -->
+      <view class="titles">{{data.sign_name}}</view>
+      <!-- 价格 -->
+      <view class="picre">￥<text>{{data.sign_price}}</text><text>原价格{{data.sign_price?data.sign_price:''}}</text></view>
+    </view>
+    <view class="lars">
+      <!-- 详情说明 -->
+      <view><text>课程时间：</text><text>{{data.sign_time}}</text></view>
+      <view><text>参与人数：</text><text>{{data.sign_people_num}}</text></view>
+      <view><text>适合年龄：</text><text>{{data.sign_age}}</text></view>
+      <view><text>活动地点：</text><text>{{data.sign_place?data.sign_place:'根据自身地址选择'}}</text></view>
+      <view><text>约课流程：</text><text>{{data.sign_process}}</text></view>
+    </view>
+    <!-- 课程介绍 -->
+    <view class="descs">
+      <image src="{{filter.url(item)}}" wx:for="{{imagelist}}" wx:key='index' mode="widthFix"></image>
+    </view>
+  </view>
+  <view class="kong"></view>
+  <!-- 购买咨询 -->
+  <view class="bottom">
+    <view class="nei">
+      <view bindtap="phone">咨询电话</view>
+      <view bindtap="pays">{{button}}</view>
+      <view bindtap="gohaibao">邀请好友</view>
+      <text wx:if="{{dislabe}}"></text>
+    </view>
+  </view>
+  <van-popup show="{{ phoneshow }}" round position="bottom" custom-style="height: 20%;z-index:9999"
+    bind:close="onClose">
+    <view class="ps" bindtap="phos" data-phone="01064758922">01064758922</view>
+    <view class="ps" bindtap="phos" data-phone="13717587769">13717587769</view>
+
+  </van-popup>
+  <view style="position:fixed;top:-10000px">
+    <painter palette="{{template}}" bind:imgOK="onImgOK" />
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<!--pages/dehshar/issue/issue.wxml-->
+<view class="woap">
+  <view wx:if="{{show == null}}">
+  <view class="rong">
+    <wxs src="../../../utils/filter.wxs" module="filter" />
+    <input type="text" placeholder="请输入文章标题" bindinput="cage" class="int" />
+    <textarea name="" id="" class="name" placeholder='输入文章内容。。。' maxlength='{{-1}}' bindinput='onchange' value="{{value}}"></textarea>
+    <view class="img" bindtap="choseimg">
+      <text wx:if="{{!image}}">+</text>
+      <image src="{{filter.url(image)}}" wx:else></image>
+    </view>
+  </view>
+  
+  <!-- 发布 -->
+  <view class="btn" bindtap="isue">发布</view>
+  </view>
+  <!-- 发布成功 -->
+  <view wx:if="{{show == 0}}" class="chang">
+    <image src="../../../image/icon/cheng.png"></image>
+    <view class="tit">发布成功</view>
+    <view class="btn" bindtap="bark">返回知识分享</view>
+  </view>
+   <!-- 发布失败 -->
+   <view wx:if="{{show == 1}}" class="chang">
+    <image src="../../../image/icon/shib.png"></image>
+    <view class="tit">发布失败</view>
+    <view class="ain" bindtap="again">重新发布</view>
+    <view class="bark" bindtap="bark">返回知识分享</view>
+  </view>
+</view>

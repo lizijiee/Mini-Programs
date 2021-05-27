@@ -1,0 +1,80 @@
+<tab active='{{4}}'></tab>
+<view class="woap">
+<!-- 头部个人信息 -->
+  <view class="head">
+  <!-- <button bindtap="getmyinfo">点击登录</button> -->
+<!--   
+<open-data type="userAvatarUrl" class="head_image"></open-data>
+
+<open-data type="userNickName"></open-data>  -->
+
+  <view class="tops">
+     <!-- 头像 -->
+      <view class="ig">
+      <view class="headimg">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="zhw">{{user.parent_name?user.parent_name:'家长'}}</view>
+      </view>
+      <!-- 名称 -->
+      <view class="name" wx:if="{{!show}}">{{user.nickname}}</view>
+      <view class="name" wx:if="{{show}}" bindtap="getmyinfo">未登录</view>
+      <!-- 积分 -->
+      <view class="jif" wx:if="{{!show}}">
+        积分：{{user.integral}}
+      </view>
+    
+  </view>
+
+
+  <!-- 卡片 -->
+  <view class="car">
+    <view class="tos">
+      <view class="back" wx:if="{{!back}}"></view>
+      <view>邀请有礼</view>
+      <view bindtap="gohaibao"><text>立即分享</text><image src="../../image/icon/right.png"></image></view>
+    </view>
+    <!-- 介绍 -->
+    <view class="kec">
+      <view>免费课程</view>
+      <view>抢先体验</view>
+      <view>免费体适</view>
+    </view>
+  </view>
+  </view>
+  <!-- nav导航 -->
+  <view class="nav">
+    <view bindtap="qianbao">
+      <image src="../../image/user/pirce.png"></image>
+      <text>钱包</text>
+    </view>
+    <view bindtap="kebiao">
+      <image src="../../image/user/kbiao.png"></image>
+      <text>课表</text>
+    </view>
+    <view bindtap="info">
+      <image src="../../image/user/xinxi.png"></image>
+      <text>信息</text>
+    </view>
+    <view bindtap="paih">
+      <image src="../../image/user/paih.png"></image>
+      <text>排行</text>
+    </view>
+  </view>
+
+  <!-- list列表 -->
+  <view class="list">
+      <view class="es" wx:for="{{list}}" wx:key='index' bindtap="navlist" data-path="{{item.to}}">
+        <view>
+          <image src="{{item.icon}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+        <image src="../../image/user/right.png" class="right"></image>
+      </view>
+  </view>
+<view class="kong"></view>
+<view style="position:fixed;top:-10000px">
+<painter palette="{{template}}" bind:imgOK="onImgOK" />
+</view>
+</view>
+

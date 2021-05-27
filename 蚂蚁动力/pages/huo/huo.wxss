@@ -1,0 +1,343 @@
+/* pages/huo/huo.wxss */
+/* pages/goodcourse/details/details.wxss */
+.woap{
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.banner{
+  width: 100%;
+  margin: 30rpx auto;
+}
+.banner image{
+  width: 100%;
+  height: 360rpx;
+  border-radius: 20rpx;
+}
+.main{
+  width: 92%;
+  margin:auto;
+  overflow: hidden;
+}
+.price_wrapper{
+  /* width: 100%; */
+  background: #fff;
+  border-radius: 15rpx;
+  margin: 30rpx auto;
+  box-shadow: 0px 4rpx 8rpx 0rpx rgba(0,0,0,0.15);
+  /* padding: 20rpx 15rpx; */
+}
+.price_wrapper view{
+  padding: 20rpx 15rpx;
+}
+
+.titles{
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  color: #0C0C0C;
+  /* height: 70rpx; */
+  font-weight: 600;
+  text-shadow: 5rpx 5rpx 5rpx #999;
+}
+.ps{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.picre{
+  font-size:24rpx;
+}
+.picre text:nth-child(1){
+  color: #F81111;
+  font-size:30rpx
+}
+.picre text:nth-child(2){
+  font-size:22rpx;
+  text-decoration:line-through;
+  padding-left: 15rpx;
+}
+
+.make{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.make view{
+  display: flex;
+  align-items: center;
+}
+.make image{
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+}
+.make text{
+  font-size:26rpx;
+  padding-left: 10rpx;
+}
+ .lars {
+  width: 100%;
+  font-size: 26rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  margin: 30rpx auto;
+  box-shadow: 0px 4rpx 8rpx 0rpx rgba(0,0,0,0.15);
+} 
+.lars view{
+  padding: 20rpx 15rpx;
+}
+.lars view text:nth-child(1){
+  color: #666;
+}
+.descs{
+  width: 98%;
+  margin: auto;
+  background: linear-gradient(143deg, #FFFFFF 0%, #FEF7EE 100%);
+  border: 1rpx solid skyblue;
+  border-radius: 40rpx;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tis{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50rpx auto;
+}
+.tis image{
+  width: 200rpx;
+  height: 100%;
+  display: block;
+}
+.descs .de{
+  display: inline-block;
+  font-size: 26rpx;
+  width: 90%;
+  padding-bottom: 30rpx;
+  color: #666;
+}
+.evimg{
+  width: 100%;
+  margin: 50rpx auto;
+  background: #FEF7EE;
+  border-radius: 30rpx;
+  padding: 100rpx 0;
+}
+.oney image{
+  width: 100%;
+  display: block;
+}
+.scr{
+  width: 98%;
+  height: 450rpx;
+  margin: auto;
+  background: linear-gradient(137deg, #FDFFED 0%, #FFEDEF 100%);
+  border-radius: 20rpx;
+  border: 2rpx solid rgba(192, 90, 255, 1);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.scroll{
+  width: 92%;
+  margin: auto;
+  white-space:nowrap;
+}
+.evs{
+  width: 170rpx;
+  text-align: center;
+  display: inline-block;
+  margin: 0 20rpx ;
+}
+.evs image{
+  width: 170rpx;
+  height: 174rpx;
+  display: block;
+}
+.evs text{
+  font-size: 30rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #32C5FF;
+  display: block;
+  height: 78rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scr .jl{
+  width: 100%;
+  font-size: 32rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #32C5FF;
+  line-height: 40rpx;
+  background: linear-gradient(124deg, #8B98D4 0%, #D99289 73%, #FF9FAB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.estime{
+  width: 98%;
+  background: linear-gradient(137deg, #FDFFED 0%, #FFEDEF 100%);
+  border-radius: 20rpx;
+  border: 2rpx solid rgba(192, 90, 255, 1);
+  margin: 50rpx auto;
+}
+.estime .its{
+  font-size: 30rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #32C5FF;
+  background: linear-gradient(124deg, #8B98D4 0%, #D99289 73%, #FF9FAB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 100%;
+  text-align: center;
+  margin: 30rpx auto;
+
+}
+.exact{
+  width: 88%;
+  margin: 50rpx auto;
+  border-radius: 20rpx;
+}
+.exact .ev{
+  overflow: hidden;
+  margin: 20rpx auto;
+  background: #fff;
+
+}
+.tops{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+.tops image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.tops text{
+  font-size: 28rpx;
+  padding: 0 10rpx;
+}
+.tops .name{
+  width: 200rpx;
+  margin-left: 15rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tops .name text{
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.xing{
+  margin-right: 28rpx;
+  position: relative;
+}
+.xing .meng{
+  width: 100%;
+  height: 50rpx;
+  z-index: 9;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.dec{
+  width: 88%;
+  margin: 20rpx auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30rpx;
+}
+.dec .t1{
+  width: 50%;
+  color: #666;
+  line-height: 34rpx;
+  font-size: 28rpx;
+}
+.dec.t2{
+  width: 100%;
+  color: #666;
+  line-height: 34rpx;
+  font-size: 28rpx;
+}
+.dec image{
+  width: 226rpx;
+  height: 176rpx;
+}
+.bottom{
+  width: 100%;
+  height: 160rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom .nei{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+}
+.nei view:nth-child(1){
+  width: 30%;
+  height: 60rpx;
+  background: linear-gradient(180deg, #FFB6C1 0%, #FFB6C1 100%);
+  border-radius: 34rpx 0rpx 0rpx 34rpx;
+}
+.nei view:nth-child(2){
+  width: 30%;
+  height:  60rpx;
+  background: linear-gradient(180deg, #FF6464 0%, #CE1616 100%);
+  border-radius: 20px;
+}
+.nei view:nth-child(3){
+  width: 30%;
+  height: 60rpx;  
+  background:skyblue;
+  border-radius:  0rpx 34rpx 34rpx 0rpx;
+}
+.nei text{
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.kong{
+  width: 100%;
+  height: 200rpx;
+}
+.nei view{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #fff;
+}

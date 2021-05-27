@@ -1,0 +1,32 @@
+<!--pages/info/paih/paih.wxml-->
+ <view class="woap">
+   <!-- baner -->
+   <view class="banner">
+     <image src="../../../image/user/ph.png" class="bg"></image>
+     <view class="mc">
+        <view wx:if="{{list.length>1}}">
+          <text>{{list[1].nickname}}</text>
+          <text>{{list[1].amount_of_money}}</text>
+        </view>   
+        <view wx:if="{{list.length>0}}">
+          <text>{{list[0].nickname}}</text>
+          <text>{{list[0].amount_of_money}}</text>
+        </view>   
+        <view wx:if="{{list.length>2}}">
+          <text>{{list[2].nickname}}</text>
+          <text>{{list[2].amount_of_money}}</text>
+        </view>       
+     </view>
+   </view>
+   <!-- 排行 -->
+   <view class="phs">
+    <view class="eve" wx:for="{{list}}" wx:key='index'>
+       <view>
+         <text class="index">{{index+1}}</text>
+         <image src="{{item.avatarurl}}"></image>
+         <text class="name">{{item.nickname}}</text>
+       </view>
+       <view>{{item.amount_of_money}}</view>
+    </view>
+   </view>
+ </view>

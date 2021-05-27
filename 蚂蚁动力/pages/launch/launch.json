@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-picker": "@vant/weapp/picker/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-transition": "@vant/weapp/transition/index"
+  },
+  "navigationBarTitleText": "发起拼课"
+}

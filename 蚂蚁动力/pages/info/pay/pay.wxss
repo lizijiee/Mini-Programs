@@ -1,0 +1,78 @@
+/* pages/info/pay/pay.wxss */
+.woap{
+  width: 100%;
+
+ 
+}
+.woap view{
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.woap image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.woap text{
+  width: 100%;
+  height: 150rpx;
+  font-size: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn{
+  width: 90%;
+  height: 80rpx;
+  margin: auto;
+  background: linear-gradient(360deg, #F23232 0%, #F21E1E 55%, #FF7979 100%);
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn1{
+  width: 90%;
+  height: 80rpx;
+  margin: auto;
+  background: linear-gradient(224deg, #07C160 0%, #07C160 100%);
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn2{
+  width: 90%;
+  height: 80rpx;
+  margin: auto;
+  background: linear-gradient(360deg, #F23232 0%, #F21E1E 55%, #FF7979 100%);
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn3{
+  width: 90%;
+  height: 80rpx;
+  margin: auto;
+  margin-top: 50rpx;
+  background: linear-gradient(180deg, #07C160 0%, #07C160 100%);
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

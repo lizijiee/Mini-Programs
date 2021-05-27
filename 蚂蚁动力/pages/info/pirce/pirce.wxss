@@ -1,0 +1,158 @@
+/* pages/info/pirce/pirce.wxss */
+.woap{
+  width: 100%;
+  min-height: 100vh;
+  background: #f1f1f1;
+  overflow: hidden;
+}
+.nav{
+  width:90%;
+  margin: 40rpx auto;
+  height: 50rpx;
+  border-radius: 22rpx;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav view{
+  width: 50%;
+  height: 100%;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navs{
+  background: linear-gradient(139deg, #FE5838 0%, #FF2020 100%);
+  color: #fff;
+}
+.nava{
+  background: #D8D8D8;
+  color: #666; 
+}
+.sale{
+  width: 90%;
+  margin: 30rpx auto;
+}
+.s_eve{
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
+}
+.bgs{
+  position: absolute;
+  width: 100%;
+  height: 320rpx;
+}
+.main{
+  width: 100%;
+  height: 320rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.jine{
+  width: 62%;
+  font-size: 26rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 50rpx;
+}
+.jine view{
+  font-size: 48rpx;
+}
+.jine view text{
+  font-size: 22rpx;
+}
+.jine .t{
+  font-size: 30rpx;
+}
+.desc{
+  color: #fff;
+  font-size: 32rpx;
+  width: 40%;
+  height: 96rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.js{
+  width: 80%;
+  position: absolute;
+  bottom: 28rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #DDDDDD;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 26rpx;
+}
+.mais{
+  width: 90%;
+  margin: 40rpx auto;
+}
+.jis{
+  width: 100%;
+  height: 320rpx;
+  position: relative;
+}
+.jis image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.jis view{
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+.jis view text:nth-child(1){
+  font-size: 40rpx;
+}
+.jis view text:nth-child(2){
+  font-size: 32rpx;
+}
+.record{
+  width: 100%;
+}
+.r_eve{
+  width: 100%;
+  height: 100rpx;
+  border-radius: 15rpx;
+  background: #fff;
+  margin: 20rpx auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.r_eve image{
+  width: 46rpx;
+  height: 46rpx;
+  display: block;
+  margin-left: 30rpx;
+}
+.r_eve .text{
+  font-size: 26rpx;
+  color: #999;
+}
+.r_eve view{
+  font-size: 26rpx;
+  color: #999;
+  margin-right: 50rpx;
+}
+.r_eve view text{
+  font-size: 26rpx;
+  color: #FF5E5E;
+}

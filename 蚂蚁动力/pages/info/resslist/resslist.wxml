@@ -1,0 +1,22 @@
+<!--pages/info/resslist/resslist.wxml-->
+<view class="woap">
+  <view wx:for="{{list}}" wx:key='index' bindlongpress='select' data-id="{{item}}">
+    <text>{{item.address}}(长按修改)</text>
+  </view>
+</view>
+<view class="btn" bindtap="add">添加地址</view>
+
+
+
+
+<van-dialog id="van-dialog" />
+<van-popup
+  show="{{ show }}"
+  round
+  position="bottom"
+  custom-style="height: 20%"
+  bind:close="onClose"
+>
+  <view class="evs" bindtap="amend">修改</view>
+  <view class="evs" bindtap="del">删除</view>
+</van-popup>
