@@ -1,0 +1,16 @@
+<!--pages/dehshar/details/details.wxml-->
+<wxs src="../../../utils/filter.wxs" module="filter" />
+<view class="woap">
+  <!-- 标题 -->
+  <view class="title">{{data.share_title}}</view>
+  <!-- 时间 -->
+  <view class="time">
+    发布时间：{{data.addtime}}
+  </view>
+  <!-- 封面 -->
+  <view class="fenm">
+    <image src="{{filter.url(data.share_pic)}}" mode="aspectFill"></image>
+  </view>
+  <!-- 内容 -->
+  <view class="desc">{{data.share_descrip}}</view>
+</view>

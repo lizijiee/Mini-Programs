@@ -1,0 +1,192 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/map/map",
+          "pathName": "pages/map/map",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/newren/newren",
+          "pathName": "pages/newren/newren",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/info/pay/pay",
+          "pathName": "pages/info/pay/pay",
+          "query": "pirice=99.99&orderid=b88f93af9b7dafe0f2dc2e2e8c54ab84",
+          "scene": null
+        },
+        {
+          "name": "pages/launch/launch",
+          "pathName": "pages/launch/launch",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/launch/launch",
+          "pathName": "pages/launch/launch",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/huo/info/info",
+          "pathName": "pages/huo/info/info",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "name": "pages/newren/newren",
+          "pathName": "pages/newren/newren",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addcourse/addcourse",
+          "pathName": "pages/addcourse/addcourse",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/huo/contract/contract",
+          "pathName": "pages/huo/contract/contract",
+          "query": "",
+          "scene": 1011
+        },
+        {
+          "name": "pages/huo/contract/contract",
+          "pathName": "pages/huo/contract/contract",
+          "query": "",
+          "scene": 1047
+        },
+        {
+          "name": "pages/huo/contract/contract",
+          "pathName": "pages/huo/contract/contract",
+          "query": "",
+          "scene": 1089
+        },
+        {
+          "name": "pages/huo/contract/contract",
+          "pathName": "pages/huo/contract/contract",
+          "query": "",
+          "scene": 1047
+        },
+        {
+          "name": "pages/huo/order/order",
+          "pathName": "pages/huo/order/order",
+          "query": "",
+          "scene": 1047
+        },
+        {
+          "name": "pages/huo/contract/contract",
+          "pathName": "pages/huo/contract/contract",
+          "query": "",
+          "scene": 1022
+        },
+        {
+          "name": "pages/huo/contract/contract",
+          "pathName": "pages/huo/contract/contract",
+          "query": "",
+          "scene": 1047
+        },
+        {
+          "name": "pages/huo/contract/contract",
+          "pathName": "pages/huo/contract/contract",
+          "query": "",
+          "scene": 1048
+        },
+        {
+          "name": "pages/huo/contract/contract",
+          "pathName": "pages/huo/contract/contract",
+          "query": "",
+          "scene": 1011
+        },
+        {
+          "name": "pages/huo/contract/contract",
+          "pathName": "pages/huo/contract/contract",
+          "query": "",
+          "scene": 1090
+        },
+        {
+          "name": "pages/huo/contract/contract",
+          "pathName": "pages/huo/contract/contract",
+          "query": "",
+          "scene": 1000
+        },
+        {
+          "name": "pages/huo/contract/contract",
+          "pathName": "pages/huo/contract/contract",
+          "query": "",
+          "scene": 1047
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": 1047
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": 1012
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": 1047
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": 1011
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": 1011
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": 1011
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": 1011
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": 1011
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": 1011
+        }
+      ]
+    }
+  }
+}

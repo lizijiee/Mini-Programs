@@ -1,0 +1,27 @@
+<!--pages/info/address/address.wxml-->
+<view class="woap">
+  <!-- 家长信息 -->
+  <view class="patriarch">
+    <view class="title">定位地址</view>
+    <view class="xinx">
+        <text>城市</text>
+        <input type="text" placeholder="请选择地址" disabled bindtap='xzadd' value="{{city}}"/>
+    </view>
+    <!-- <view class="xinx">
+        <text>联系方式</text>
+        <input type="number" placeholder="请输入手机号" maxlength="11" bindinput="phone" 
+        value="{{phone}}"/>
+    </view>
+    <view class="xinx">
+        <text>详细地址</text>
+        <input type="text" placeholder="请输入详细地址" bindinput="ards" 
+        value="{{ards}}"/>
+    </view>
+    <view class="xinx">
+        <text>姓名</text>
+        <input type="text" placeholder="请输入真实姓名" bindinput="name" 
+        value="{{name}}"/>
+    </view> -->
+    <view class="btn" bindtap="save">保存</view>
+  </view>
+</view>

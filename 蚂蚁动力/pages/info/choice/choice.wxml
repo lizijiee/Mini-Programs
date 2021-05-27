@@ -1,0 +1,123 @@
+<!--pages/launch/launch.wxml-->
+<view class="woap">
+  <view class="lst" bindtap="xianm">
+    <text class="tiile">课程项目</text>
+    <view>
+      <input placeholder="选择课程项目" value="{{xianm}}" type="text" disabled="disabled" />
+      <image src="../../image/icon/xbot.png"></image>
+    </view>
+  </view>
+
+
+  <view class="lst" bindtap="datetime">
+    <text class="tiile">选择日期</text>
+    <view>
+      <input placeholder="选择上课日期" value="{{datetime}}" type="text" disabled="disabled" />
+      <image src="../../image/icon/xbot.png"></image>
+    </view>
+  </view>
+
+  <view class="lst" bindtap="ages">
+    <text class="tiile">年龄段</text>
+    <view>
+      <input placeholder="选择学员年龄范围" value="{{ages}}" type="text" disabled="disabled" />
+      <image src="../../image/icon/xbot.png"></image>
+    </view>
+  </view>
+  <!-- <view class="ra" wx:if="{{type != 1}}">
+        <van-radio-group value="{{ radio }}" bind:change="onChange" class='radio'>
+          <van-radio name="1" icon-size="30rpx">多人拼课</van-radio>
+          <van-radio name="2" icon-size="30rpx">1-1</van-radio>
+        </van-radio-group>
+      </view> -->
+
+  <view class="class_type">
+    <text class="tiile">班级类型</text>
+    <view>
+      <van-radio-group style="width:100%" value="{{ classtype }}" bind:change="onChange">
+        <van-row>
+          <van-col span="12">
+            <van-radio name="1" icon-size="30rpx">1v1私教课</van-radio>
+          </van-col>
+          <van-col span="12">
+            <van-radio name="2" icon-size="30rpx">3-8精品课</van-radio>
+          </van-col>
+        </van-row>
+      </van-radio-group>
+    </view>
+  </view>
+
+  <view class="lst" bindtap="time">
+    <text class="tiile">上课时间</text>
+    <view>
+      <input placeholder="选择上课时间" value="{{time}}" type="text" disabled="disabled" />
+      <image src="../../image/icon/xbot.png"></image>
+    </view>
+  </view>
+  <view class="lst" bindtap="site">
+    <text class="tiile">场地类型</text>
+    <view>
+      <input placeholder="选择场地类型" value="{{chand}}" type="text" disabled="disabled" />
+      <image src="../../image/icon/xbot.png"></image>
+    </view>
+  </view>
+  <view class="lst">
+    <text class="tiile">场地地址</text>
+    <view>
+      <input style="width:100%" placeholder="选择场地所在地" value="{{address}}" type="text" disabled="disabled"
+        bindtap="cut" />
+    </view>
+  </view>
+  <view class="lst">
+    <text class="tiile">场地详细地址</text>
+    <view>
+      <input style="width:100%" placeholder="填写场地详细地址" value="{{image}}" type="text" bindinput="input" />
+    </view>
+  </view>
+  <view class="lst">
+    <text class="tiile">姓名：</text>
+    <view>
+      <input style="width:100%" placeholder="填写姓名" value="{{nameage}}" type="text" bindinput="names" />
+    </view>
+  </view>
+
+  <view class="lst">
+    <text class="tiile">手机号：</text>
+    <view>
+      <input style="width:100%" placeholder="填写手机号" value="{{tel}}" type="text" bindinput="tels" />
+    </view>
+  </view>
+
+  <view class="lst">
+    <text class="tiile">验证码：</text>
+    <view>
+      <input style="width:60%" placeholder="填写验证码" value="{{code}}" type="text" bindinput="codes" />
+      <text bindtap='getcode'>{{timecode}}</text>
+    </view>
+  </view>
+<!-- 拼课中有相同功能 -->
+  <!-- <view class="protocol">
+    <van-checkbox icon-size="30rpx" shape="square" style="display:inline-block" value="{{ readProtocol }}"
+    bind:change="toggle"></van-checkbox>
+    <text class="tiile">我已阅读并同意《蚂蚁动力少儿体育上课须知》和《蚂蚁动力少儿体育服务合同》</text>
+  </view> -->
+
+  <view class="btn" bindtap="sponsor">{{button}}</view>
+</view>
+
+
+
+<view class="pick" wx:if="{{show}}">
+  <view class="botom">
+    <van-picker columns="{{ columns }}" value-key='{{name}}' show-toolbar bind:cancel="onCancel"
+      bind:confirm="onConfirm" title="{{title}}" />
+  </view>
+</view>
+
+
+<view class="pick" wx:if="{{datetimes}}">
+  <view class="botom">
+    <van-datetime-picker type="date" value="{{ currentDate }}" min-date="{{ minDate }}" formatter="{{ formatter }}"
+      bind:confirm='confirm' bind:cancel='cancel' filter="{{ filter }}" />
+  </view>
+</view>

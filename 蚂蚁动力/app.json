@@ -1,0 +1,88 @@
+{
+  "pages":[ 
+    "pages/home/home",
+    "pages/dedail/dedail",
+    "pages/goodcourse/goodcourse",
+    "pages/user/user",
+    "pages/newren/newren",
+    "pages/addcourse/addcourse",
+    "pages/dehshar/dehshar",
+    "pages/launch/launch",
+    "pages/map/map",
+    "pages/dehshar/details/details",
+    "pages/goodcourse/details/details",
+    "pages/dehshar/issue/issue",
+    "pages/info/pirce/pirce",
+    "pages/info/choice/choice",
+    "pages/info/kebiao/kebiao",
+    "pages/info/estimate/estimate",
+    "pages/info/sure/sure",
+    "pages/info/pay/pay",
+    "pages/info/info/info",
+    "pages/info/paih/paih",
+    "pages/info/kec/kec",
+    "pages/info/address/address",
+    "pages/info/baog/baog",
+    "pages/info/heto/heto",
+    "pages/info/resslist/resslist",
+    "pages/huo/huo",
+    "pages/huo/order/order",
+    "pages/huo/info/info",
+    "pages/huo/pay/pay",
+    "pages/pink/pink"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "tab": "/custom-tab-bar/index"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#656565",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "image/tab/home.png",
+        "selectedIconPath": "image/tab/home_s.png"
+      },
+      {
+        "pagePath": "pages/addcourse/addcourse",
+        "text": "附近班级",
+        "iconPath": "image/tab/addcourse.png",
+        "selectedIconPath": "image/tab/addcourse_s.png"
+      },
+      {
+        "pagePath": "pages/goodcourse/goodcourse",
+        "text": "蚂蚁专享",
+        "iconPath": "image/tab/goodcourse.png",
+        "selectedIconPath": "image/tab/goodcourse_s.png"
+      },
+      {
+        "pagePath": "pages/dehshar/dehshar",
+        "text": "知识分享",
+        "iconPath": "image/tab/dehshar.png",
+        "selectedIconPath": "image/tab/dehshar_s.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "image/tab/user.png",
+        "selectedIconPath": "image/tab/user_s.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FE5838",
+    "navigationBarTitleText": "蚂蚁动力",
+    "navigationBarTextStyle":"white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

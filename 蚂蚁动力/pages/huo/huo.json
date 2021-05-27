@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "painter": "/components/painter/painter",
+    "van-popup": "@vant/weapp/popup/index"
+  },
+  "navigationBarTitleText": "活动详情"
+}

@@ -1,0 +1,10 @@
+/* pages/dedail/dedail.wxss */
+view{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+image{
+  margin: auto;
+  display: block;
+}

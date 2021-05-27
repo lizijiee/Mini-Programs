@@ -1,0 +1,113 @@
+/* pages/dehshar/dehshar.wxss */
+.woap{
+  width: 100vw;
+  min-height: calc(100vh - 11vh);
+  background: #F1F1F1;
+  overflow: hidden;
+}
+.eve{
+  width: 86%;
+  margin: 50rpx auto;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20rpx;
+  height: 300rpx;
+  border-radius: 5rpx;
+}
+.left{
+  width: 36%;
+  height: 242rpx;
+}
+.left image{
+  width: 100%;
+  height: 100%;
+}
+.right{
+  width: 54%;
+  position: relative;
+  height: 242rpx;
+}
+.right image{
+  width: 32rpx;
+  height: 30rpx;
+}
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title text:nth-child(1){
+  width: 50%;
+  font-size: 32rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #000000;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.title text:nth-child(2){
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  width: 50%;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.issue{
+  width: 116rpx;
+  height: 116rpx;
+  background: linear-gradient(360deg, #F23232 0%, #F21E1E 55%, #FF7979 100%);
+  box-shadow: 0px 4px 8px 0px rgba(255,143,69,1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: 2rpx;
+  text-shadow: 0rpx 2rpx 0rpx rgba(0, 0, 0, 0.21);
+  position: fixed;
+  bottom: 244rpx;
+  right: 28rpx;
+}
+.desc{
+  width: 100%;
+  color: #666;
+  font-size: 28rpx;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  line-height: 34rpx;
+  margin: 20rpx 0;
+}
+.icon{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.icon text{
+  font-size: 26rpx;
+  color: #666;
+  padding-left: 10rpx;
+}
+.icon image:nth-child(2){
+  display: block;
+  margin-right: -24rpx;
+}
+.kong{
+  width: 100%;
+  height: 200rpx;
+}

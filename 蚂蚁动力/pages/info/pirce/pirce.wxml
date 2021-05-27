@@ -1,0 +1,51 @@
+<!--pages/info/pirce/pirce.wxml-->
+<!-- 主体 -->
+<view class="woap">
+<!-- 导航 -->
+  <view class="nav">
+    <view class="{{active == index ? 'navs' : 'nava'}}" wx:for="{{list}}" wx:key='index' bindtap="change" data-index="{{index}}">
+     {{item}}
+    </view>
+  </view>
+
+  <!-- 优惠券 -->
+  <view class="sale" wx:if="{{active == 0}}">
+    <view wx:for="{{sale}}" wx:key='index' class="s_eve">
+      <image src="../../../image/user/picbg.png" class="bgs"></image>
+      <!-- 价格 -->
+     <view class="main">
+        <view class="jine"><view><text>￥</text>{{item.coupon_money}}.00</view><text class="t">无门槛</text></view>
+        <view class="desc">{{item.coupon_descrip}}</view>
+        <view class="xian"></view>
+        <view class="js"><text>{{item.coupon_name}}</text><text>{{item.addtime}}</text></view>
+     </view>
+    </view>
+  </view>
+
+  <!-- 积分 -->
+  <view class="mais" wx:if="{{active == 1}}">
+    <!-- bg -->
+    <view class="jis"><image src="../../../image/user/init.png"></image>
+    <view>
+      <text>{{user.integral}}</text>
+      <text>积分</text>
+    </view>
+    </view>
+    <!-- 消费记录 -->
+    <view class="record">
+      <view class="r_eve" wx:for="{{inte}}" wx:key='index'>
+        <image src="../../../image/user/ru.png" wx:if="{{item.status==1 || item.status==2 || item.status==3}}"></image>
+        <image src="../../../image/user/cu.png" wx:if="{{item.status == 4}}"></image>
+
+        <text class="text" wx:if="{{item.status == 1}}">下载分享图片</text>
+        <text class="text" wx:if="{{item.status == 2}}">邀请好友</text>
+        <text class="text" wx:if="{{item.status == 3}}">购买课程返利</text>
+        <text class="text" wx:if="{{item.status == 4}}">购买课程</text>
+
+        <view wx:if="{{item.status==1 || item.status==2 || item.status==3}}">获得<text>{{item.integral_num}}</text>积分</view>
+        <view wx:if="{{item.status == 4}}">支出<text>{{item.integral_num}}</text>积分</view>
+      </view>
+    </view>
+  </view>
+
+</view> 

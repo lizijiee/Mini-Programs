@@ -1,0 +1,7 @@
+<!--pages/dedail/dedail.wxml-->
+<wxs src='../../utils/filter.wxs' module="filter"></wxs>
+<view>
+	<!-- <image src="{{filter.url(item)}}" wx:for="{{list.carousel_content_img}}" mode="aspectFill"></image> -->
+	<!-- <rich-text class="style" nodes="{{list}}"></rich-text> -->
+	<web-view src="{{link}}"></web-view>
+</view>

@@ -1,0 +1,9 @@
+
+var url = function(url){
+  return 'https://myxqty.com' + url
+}
+
+
+module.exports = {
+  url: url
+};

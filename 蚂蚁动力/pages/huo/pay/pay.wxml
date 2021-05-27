@@ -1,0 +1,18 @@
+<view class="woap">
+  <view wx:if="{{show == 1}}">
+    <image src="../../../image/icon/pay.png"></image>
+    <text>付款金额：{{pirice}}</text>
+    <button class="btn" bindtap="submit">确认支付</button>
+  </view>
+  <view  wx:if="{{show == 2}}">
+    <image src="../../../image/icon/cheng.png"></image>
+    <text>发起成功</text>
+    <button class="btn1" bindtap="home">返回首页</button>
+  </view>
+  <view  wx:if="{{show == 3}}">
+    <image src="../../../image/icon/shib.png"></image>
+    <text>发起失败</text>
+    <button class="btn2" bindtap="chon">重新发起</button>
+    <button class="btn3" bindtap="home">返回首页</button>
+  </view>
+</view>

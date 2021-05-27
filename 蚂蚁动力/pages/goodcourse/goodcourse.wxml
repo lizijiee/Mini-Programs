@@ -1,0 +1,41 @@
+<!--pages/goodcourse/goodcourse.wxml-->
+<tab active='{{2}}'></tab>
+<wxs src="../../utils/filter.wxs" module="filter" />
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="线下活动">
+   <!-- 数据列表 -->
+   <view class="list">
+    <view class="eve" wx:for="{{offline}}" wx:key='index' bindtap="todeta" data-id="{{item.id}}">
+      <!-- 封面 -->
+      <view class="image">
+        <image src="{{filter.url(item.sign_pic)}}"></image>
+      </view>
+      <!-- title -->
+      <view class="title"><text>{{item.sign_name}}</text></view>
+      <view class="desc">{{item.sign_descrip}}</view>
+    </view>
+    <!-- 暂无更多 -->
+    <view class="end">暂无更多活动...</view>
+  </view>
+
+  </van-tab>
+  
+  <van-tab title="线上活动">
+  <!-- 数据列表 -->
+  <view class="list">
+    <view class="eve" wx:for="{{on_line}}" wx:key='index'>
+      <!-- 封面 -->
+      <view class="image">
+        <image src="{{filter.url(item.course_pic)}}"></image>
+      </view>
+      <!-- title -->
+      <view class="title"><text>{{item.course_name}}</text></view>
+      <view class="desc">{{item.course_descrip}}</view>
+    </view>
+    <!-- 暂无更多 -->
+    <view class="end">暂无更多活动...</view>
+  </view>
+
+  </van-tab>
+  
+</van-tabs>

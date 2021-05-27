@@ -1,0 +1,4 @@
+<!--pages/info/heto/heto.wxml-->
+<view style="padding: 30rpx;">
+  <rich-text class="style" nodes="{{list}}"></rich-text>
+</view>

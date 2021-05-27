@@ -1,0 +1,9 @@
+/* pages/info/baog/baog.wxss */
+.woap{
+  width: 100%;
+}
+image{
+  width: 100%;
+  margin: auto;
+  display: block;
+}

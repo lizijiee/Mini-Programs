@@ -1,0 +1,68 @@
+<view class="lst" bindtap="xianm">
+    <text class="tiile">课程项目</text>
+    <view>
+      <!-- <text>{{xianm}}</text> -->
+      <van-cell-group>
+        <van-field
+          value="{{ value }}"
+          placeholder="选择课程项目"
+          border="{{ false }}"
+          bind:change="onChange"
+        />
+      </van-cell-group>
+      <image src="../../image/icon/xbot.png"></image>
+
+    </view>
+  </view>
+
+
+  <view class="lst" bindtap="datetime">
+    <text class="tiile">选择日期</text>
+    <view>
+      <text>{{datetime}}</text>
+      <image src="../../image/icon/xbot.png"></image>
+    </view>
+  </view>
+
+
+  <view class="lst" bindtap="banj">
+    <text class="tiile">班级类型</text>
+    <view>
+      <text>{{banj}}</text>
+      <image src="../../image/icon/xbot.png"></image>
+    </view>
+  </view>
+  <view class="lst" bindtap="ages">
+    <text class="tiile">年龄段</text>
+    <view>
+      <text>{{ages}}</text>
+      <image src="../../image/icon/xbot.png"></image>
+    </view>
+  </view>
+  <view class="lst" bindtap="time">
+    <text class="tiile">上课时间</text>
+    <view>
+      <text>{{time}}</text>
+      <image src="../../image/icon/xbot.png"></image>
+    </view>
+  </view>
+  <view class="lst" bindtap="site">
+    <text class="tiile">场地类型</text>
+    <view>
+      <text>{{chand}}</text>
+      <image src="../../image/icon/xbot.png"></image>
+    </view>
+  </view>
+  <view class="lst">
+    <text class="tiile">场地地址</text>
+    <view>
+      <text bindtap="cut">{{address}}</text>
+    </view>
+  </view>
+  <view class="lst" bindtap="img">
+    <text class="tiile">场地类型</text>
+    <view>
+       <text>上传照片</text>
+    </view>
+  </view>
+  <view class="btn" bindtap="sponsor">发起拼课</view>
