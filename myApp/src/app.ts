@@ -3,7 +3,9 @@ import './app.scss'
 
 class App extends Component {
 
-  componentDidMount () {}
+  componentDidMount () {
+    console.log(this.props)
+  }
 
   componentDidShow () {}
 
