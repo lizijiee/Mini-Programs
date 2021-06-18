@@ -1,61 +1,209 @@
+@import '../addcourse/addcourse.wxss';
+
 /* pages/home/home.wxss */
-.kong{
+.kong {
   width: 100%;
   height: 150rpx;
 }
-.vh{
+
+.vh {
   width: 100%;
   height: 90vh;
 }
-.woap{
+
+.woap {
   width: 100vw;
-  min-height:calc(100vh - 11vh) ;
+  min-height: calc(100vh - 11vh);
   padding-bottom: 50rpx 0;
+  background-color: #FAFAFA;
+  margin: 0;
 }
-.culum{
+
+.joinlesson {
+  width: 662rpx;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30rpx 20rpx 0 20rpx;
+  border-radius: 20rpx;
+  position: relative;
+  border: none;
+}
+
+.joinlesson .line {
+  /* position: absolute; */
+  width: 100%;
+  margin: 0;
+  /* left: 0; */
+  /* top: 63rpx; */
+  /* border: 1px solid #F2F2F2; */
+}
+
+.joinlesson>view icon {
+  height: 32rpx;
+  width: 6rpx;
+  background-color: #F96041;
+  vertical-align: middle;
+  margin-right: 17rpx;
+}
+
+.joinlesson .title {
+  font-size: 30rpx;
+  font-weight: bold;
+  padding-right: 15rpx;
+  vertical-align: middle;
+}
+
+.joinlesson .more {
+  float: right;
+  font-size: 19rpx;
+  color: #999999;
+}
+
+.joinlesson .more image {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+
+.usercommit {
+  width: 100%;
+  padding: 0 0 30rpx 0;
+}
+
+.usercommit>view {
+  padding: 30rpx 20rpx 31rpx 20rpx;
+  width: 662rpx;
+  margin: 0 auto;
+}
+
+.usercommit swiper {
+  height: 460rpx;
+}
+
+.optionBox {
+  height: 460rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.optionBox image {
+  height: 380rpx;
+  line-height: 460rpx;
+}
+
+.activeItem {
+  margin: 0;
+  width: 434rpx;
+  height: 460rpx !important;
+  line-height: 460rpx;
+}
+
+.activeItem image {
+  width: 434rpx;
+  height: 460rpx;
+  line-height: 460rpx;
+  transition-duration: 0.3s;
+}
+
+.swiperText {
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  font-family: bariol_bold;
+  font-size: 0.5em;
+  color: #4a4a4a;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .5);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.perch {
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  height: 300rpx;
+  width: 702rpx;
+  margin: 0 auto;
+  border-radius: 12rpx;
+}
+
+.banner swiper-item {
+  height: 100%;
+  width: 100%;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+
+.banner .slide-image {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.culum {
   width: 95%;
   margin: auto;
   background: #fff;
   border-radius: 30rpx;
   margin-bottom: 30rpx;
-  box-shadow:0 2rpx 12rpx 0 rgba（0，0，0，0.1）;
+  box-shadow: 0 2rpx 12rpx 0 rgba（0，0，0，0.1）;
 }
-.culum .title{
+
+.culum .title {
   width: 92%;
   margin: auto;
   height: 100rpx;
   display: flex;
   align-items: center;
 }
-.culum .title text{
-  font-size:36rpx;
+
+.culum .title text {
+  font-size: 36rpx;
   font-weight: bold;
   padding-right: 15rpx;
 }
-.culum .title image{
+
+.culum .title image {
   width: 28rpx;
   height: 24rpx;
 }
-.eves{
+
+.eves {
   width: 92%;
   margin: auto;
 }
-.eve{
+
+.eve {
+  border-bottom: 1px solid #ebedf0;
   width: 100%;
   margin: auto;
   padding-bottom: 30rpx;
+  padding-top: 20rpx;
 }
-.eve image{
+
+/* .eve image {
   width: 100%;
   height: 270rpx;
   border-radius: 30rpx;
-}
+} */
 
-.baer{
-  width:100%;
+.baer {
+  width: 100%;
   position: relative;
 }
-.baer text{
+
+.baer text {
   display: inline-block;
   position: absolute;
   bottom: 30rpx;
@@ -68,9 +216,10 @@
   letter-spacing: 6rpx;
   text-shadow: 5rpx 5rpx 5rpx #000000;
 }
-.eve .desc{
+
+.eve .desc {
   width: 90%;
-  font-size:28rpx;
+  font-size: 28rpx;
   color: #666;
   margin: 15rpx auto;
   word-break: break-all;
@@ -80,82 +229,166 @@
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
-.headimg{
-  width: 75rpx;
-  height: 75rpx;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.head{
+
+
+
+.head {
+  /* padding: 0 0 168rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FE5838;
+  border-radius: 0 0 32rpx 32rpx;
+  position: relative;
+  margin-bottom: 260rpx; */
   width: 95%;
   margin: 15rpx auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.name{
+
+.head .headimg {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.head .name {
   width: 100rpx;
   text-align: center;
+  /* margin-top: 18rpx; */
 }
-.name text{
+
+.head .name text {
   display: block;
 }
-.name text:nth-child(1){
+
+.head .name text:nth-child(1) {
   width: 100rpx;
-  font-size:26rpx;
+  font-size: 26rpx;
   overflow: hidden;
-  text-overflow:ellipsis;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
-.name text:nth-child(2){
+
+.head .name text:nth-child(2) {
   font-size: 22rpx;
 }
-.seach{
+
+.head .seach {
   width: 400rpx;
-  height: 76rpx;
+  height: 50rpx;
   border-radius: 100rpx;
   border: 1rpx solid #979797;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  margin: 0;
 }
-.seach image{
+
+.head .line {
+  width: 1rpx;
+  background-color: grey;
+  height: 42rpx;
+  margin: 0px 5rpx 0 15rpx;
+}
+
+.head .seach image {
   width: 24rpx;
   height: 24rpx;
   margin-right: 30rpx;
+  margin-left: 0;
 }
-.seach input{
+
+.head .seach input {
   width: 70%;
   font-size: 24rpx;
 }
-.int{
+
+.head .int {
   width: 110rpx;
   text-align: center;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  color: #333333;
 }
-.int image{
-  width: 58rpx;
-  height: 58rpx;
+
+.head .int image {
+  width: 48rpx;
+  height: 48rpx;
   margin: auto;
 }
-.int text{
-  font-size: 24rpx;
+
+.head .int text {
+  font-size: 20rpx;
   font-weight: 400;
   color: #0C0C0C;
 }
-.navs{
+
+.selectlesson {
+  width: 638rpx;
+  position: absolute;
+  left: 24rpx;
+  bottom: -228rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  background-color: white;
+  border-radius: 25rpx;
+  padding: 0 32rpx 29rpx 32rpx;
+}
+
+.selectlesson .joinbutton {
+  text-align: center;
+  /* flex: 0 0 25%; */
+  margin-right: 82rpx;
+  margin-top: 30rpx;
+}
+
+.selectlesson .joinbutton:nth-child(4),
+.selectlesson .joinbutton:nth-child(8) {
+  margin-right: 0rpx;
+}
+
+.selectlesson .joinbutton image {
+  display: block;
+  width: 98rpx;
+  height: 98rpx;
+  margin: 0 auto;
+
+  /* display: block; */
+}
+
+.selectlesson .joinbutton text {
+  color: #333333;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.navs {
   width: 100%;
-  height: 176rpx;
+  height: 160rpx;
+  line-height: 190rpx;
   background: #FE5838;
   position: sticky;
   top: 0;
   z-index: 9;
+  color: white;
+  font-size: 31rpx;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
 }
-.ation{
+
+.ation {
   color: #fff;
   position: absolute;
   bottom: 32rpx;
@@ -164,58 +397,98 @@
   display: flex;
   align-items: center;
 }
-.ation text{
+
+.ation text {
   display: block;
   max-width: 360rpx;
-  overflow: hidden;/*超出部分隐藏*/
-  white-space: nowrap;/*不换行*/
-  text-overflow:ellipsis;/*超出部分文字以...显示*/
+  overflow: hidden;
+  /*超出部分隐藏*/
+  white-space: nowrap;
+  /*不换行*/
+  text-overflow: ellipsis;
+  /*超出部分文字以...显示*/
 }
-.ation image{
+
+.ation image {
   width: 30rpx;
   height: 15rpx;
   padding-left: 20rpx;
 }
-swiper{
-  height: 356rpx;
-  width: 92%;
-  margin: 0rpx auto;
+
+
+
+@keyframes scale {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
 }
-swiper-item {
-  height: 100%;
+
+.newuser {
   width: 100%;
-  border-radius: 15rpx;
-  overflow: hidden;
+  margin: auto;
+  /* animation: scale 2s  infinite; */
+  animation: scale 0.9s ease-in 0s infinite alternate;
+  background: white;
 }
-.slide-image{
-  height: 100%;
+
+.newuser>image:nth-child(1) {
+  width: 702rpx;
+  height: 211rpx;
+  display: block;
+  margin: 0 auto;
+  /* animation: width 2s both infinite; */
+}
+
+.newuser>image:nth-child(2) {
   width: 100%;
+  height: 25rpx;
+  display: block;
+  /* animation: width 2s both infinite; */
 }
-.newuser{
-  width: 98%;
-  height: 280rpx;
+
+.newuser .notice {
+  width: 702rpx;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: auto;
+  justify-content: space-between;
+  font-size: 0;
+  padding-top: 17rpx;
+  padding-bottom: 30rpx;
+  margin: 0 auto;
 }
-.newuser image{
-  width: 100%;
-  height: 100%;
-  animation:width 2s both infinite;
+
+.newuser .noticeitem image {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
 }
-.display{
+
+.newuser .noticeitem text {
+  font-size: 18rpx;
+  vertical-align: middle;
+}
+
+.display {
   width: 92%;
   margin: 40rpx auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.display image{
+
+.display image {
   width: 32%;
   height: 54rpx;
 }
-.lists{
+
+.lists {
   position: absolute;
   top: 80rpx;
   left: 68rpx;
@@ -224,7 +497,8 @@ swiper-item {
   max-height: 240rpx;
   z-index: 9999;
 }
-.lists text{
+
+.lists text {
   display: block;
   width: 100%;
   height: 60rpx;
@@ -235,12 +509,14 @@ swiper-item {
   border-bottom: 1rpx solid #eee;
   padding-left: 15rpx;
 }
-.mains{
-  width:500rpx;
+
+.mains {
+  width: 500rpx;
   height: 400rpx;
   overflow: hidden;
 }
-.mains view{
+
+.mains view {
   display: flex;
   align-items: center;
   width: 96%;
@@ -250,17 +526,159 @@ swiper-item {
   margin: 10rpx auto;
 }
 
-@keyframes width{
-  0%{
+@keyframes width {
+  0% {
     width: 100%;
     height: 100%;
   }
-  50%{
+
+  50% {
     width: 90%;
     height: 90%;
   }
-  100%{
+
+  100% {
     width: 100%;
     height: 100%;
   }
+}
+
+.joinlessonlist {
+  /* padding-top: 30rpx; */
+  height: 810rpx;
+  overflow: auto;
+}
+
+
+.right {
+  width: 60%;
+  padding: 20rpx 0;
+}
+
+.ae {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left image {
+  width: 228rpx;
+  height: 180rpx;
+  border-radius: 15rpx;
+}
+
+.top {
+  width: 100%;
+  height: inherit;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #0C0C0C;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top>text {
+  font-size: 27rpx;
+  margin-bottom: 10rpx;
+  color: #000;
+}
+
+.top>view {
+  font-size: 19rpx;
+  color: #999999;
+}
+
+.top>view text {
+  font-size: 19rpx;
+  color: red;
+}
+
+.place {
+  font-size: 19rpx;
+  color: #333333;
+  margin-bottom: 9rpx;
+}
+
+.time {
+  font-size: 26rpx;
+  color: #666;
+  /* height: 70rpx; */
+  display: flex;
+  margin-bottom: 10rpx;
+}
+
+.time text {
+  font-size: 20rpx;
+  color: #999999;
+}
+
+.time image {
+  height: 20rpx;
+  width: 20rpx;
+  margin: 2rpx 8rpx 16rpx 39rpx;
+}
+
+.botom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.joinlessonlist .botom text {
+  /* width: inherit; */
+  font-size: 20rpx;
+  color: #F96041;
+  padding: 8rpx 20rpx;
+  border: 1px solid #F96041;
+  background: white;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+
+.joinlessonlist .botom text:nth-child(1) {
+  /* width: inherit; */
+  font-size: 20rpx;
+  color: #237EEE;
+  padding: 8rpx 20rpx;
+  border: 1px solid #237EEE;
+  background: white;
+  border-radius: 20rpx;
+}
+
+.joinlessonlist .botom text:nth-child(3) {
+  margin-right: 0;
+}
+
+.joinlessonlist .headimg {
+  height: 60rpx;
+  overflow: inherit;
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.joinlessonlist .headimg .imgwrapper {
+  position: relative;
+  height: inherit;
+  height: 80rpx;
+  /* width: 200rpx; */
+}
+
+.joinlessonlist .headimg image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin: 0 10rpx;
+  margin-top: 18rpx;
+}
+
+.joinlessonlist .headimg>text {
+  /* width: 100%; */
+  text-align: right;
+  margin-top: 30rpx;
+  color: #999999;
+  font-size: 19rpx;
 }

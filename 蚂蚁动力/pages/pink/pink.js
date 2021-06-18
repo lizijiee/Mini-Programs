@@ -89,7 +89,7 @@ Page({
       title: '加载中...',
     })
     let item = this.data
-    if (item.name == '' || item.tel == '' || item.numcode == '') {
+    if (item.name == ''||item.age == '' || item.tel == '' || item.numcode == '') {
       wx.hideLoading()
       wx.showToast({
         title: '信息不可为空',
@@ -104,6 +104,7 @@ Page({
           let data = {
             ...app.globalData.orderinfo,
             child_name: item.name,
+            age: item.age,
             contact_phone: item.tel,
             code: item.numcode
           }

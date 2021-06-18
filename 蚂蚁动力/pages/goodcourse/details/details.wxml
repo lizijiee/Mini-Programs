@@ -96,7 +96,7 @@
     <view class="nei">
       <view bindtap="phone">咨询</view>
       <!-- <view bindtap="pays">{{button}}</view> -->
-      <view bindtap="pays">购买</view>
+      <view bindtap="pays">加入班级</view>
       <view bindtap="gohaibao">{{share}}</view>
       <text wx:if="{{dislabe}}"></text>
     </view>

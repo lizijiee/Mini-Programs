@@ -11,11 +11,12 @@
   z-index: 999;
 }
 .tabls image{
-  width: 50rpx;
-  height: 50rpx;
+  width: 45rpx;
+  height: 45rpx;
+  margin-bottom: 5rpx;
 }
 .tabls text{
-  font-size:20rpx;
+  font-size:19rpx;
   font-family:PingFang SC;
   font-weight:400;
   line-height:30rpx;

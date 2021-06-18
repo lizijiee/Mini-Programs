@@ -49,7 +49,7 @@
       <view>
         <view style="display:inline">我已阅读并同意</view>
         <navigator hover-class="none" style="display:inline" url='/pages/info/heto/heto'>
-          <view style="font-weight:bold;color:#FF6464;display:inline">
+          <view style="font-weight:bold;color:#F83636;display:inline">
             《蚂蚁动力少儿体育上课须知》和《蚂蚁动力少儿体育服务合同》</view>
         </navigator>
       </view>

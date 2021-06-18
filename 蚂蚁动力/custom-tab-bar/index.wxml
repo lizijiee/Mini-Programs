@@ -1,7 +1,9 @@
 <van-tabbar class='tabls-home' active="{{ active }}" bind:change="onChange" fixed='{{true}}'
   active-color="#FE2A24"
   inactive-color="#656565">
-  <van-tabbar-item wx:for='{{list}}' wx:key="index" >
+  <van-tabbar-item wx:for='{{list}}' wx:key="index" 
+  style=" border-top: 1rpx solid #ebedf0 "
+  >
     <view class="tabls">
      <image
       slot="icon-active"

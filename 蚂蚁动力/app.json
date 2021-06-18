@@ -81,8 +81,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#FE5838",
-    "navigationBarTitleText": "蚂蚁动力",
-    "navigationBarTextStyle":"white"
+    "navigationBarTitleText": "蚂蚁动力"
   },
   "sitemapLocation": "sitemap.json"
 }

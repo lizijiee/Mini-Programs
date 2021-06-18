@@ -109,7 +109,7 @@ Page({
     let user = wx.getStorageSync('user')
     if (item.people_num == item.max_people_num) {
       wx.showToast({
-        title: '该班级已满员',
+        title: '该班级已满员，您可发起拼班。',
         icon: 'none'
       })
     } else {

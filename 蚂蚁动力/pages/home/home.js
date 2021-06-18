@@ -35,6 +35,73 @@ Page({
     longitude: '',
     ressshow: false, //地址选择
     resslist: [], //地址选择
+    joinList:[], // 附近拼课班级列表
+    lessonList:[
+      {
+        id:2,
+        name:'跳绳',
+        src:'../../image/icon/icon_skip.png'
+      },
+      {
+        id:5,
+        name:'体适能',
+        src:'../../image/icon/icon_tishineng.png'
+      },
+      {
+        id:8,
+        name:'小体适能',
+        src:'../../image/icon/icon_xiaotidabiao.png'
+      },
+      {
+        id:10,
+        name:'中体适能',
+        src:'../../image/icon/icon_zhongtidabiao.png'
+      },
+      {
+        id:6,
+        name:'武道三项',
+        src:'../../image/icon/icon_wudaosanxiang.png'
+      },
+      {
+        id:100,
+        name:'活动赛事',
+        src:'../../image/icon/icon_huodongsaishi.png'
+      },
+      {
+        id:101,
+        name:'蚂蚁专享',
+        src:'../../image/icon/icon_mayizhuanxiang.png'
+      },
+      {
+        id:102,
+        name:'更多',
+        src:'../../image/icon/icon_gengduo.png'
+      }
+    ],
+    imgInfoArrLength: 0,  // 轮播图列表的长度
+    centerItem: 0,  // 居中项的位置
+    assess:[], // 评价列表
+    imgInfoArr: [
+      {
+        src: '../../image/icon/commit.png',
+        text: '测试数据',
+        id: 0
+      },
+      {
+        src: '../../image/icon/commit.png',
+        text: '测试数据',
+        id: 1
+      },
+      {
+        src: '../../image/icon/commit.png',
+        text: '测试数据',
+        id: 2
+      },
+      {
+        src: '../../image/icon/commit.png',
+        text: '测试数据',
+        id: 3
+      }]
   },
   // 授权登录
   login() {
@@ -69,6 +136,7 @@ Page({
           avatarurl: url,
           share_id: shareid ? shareid : ''
         }).then(res => {
+          console.log(res.data)
           _this.setData({
             show: false,
             user: res.data
@@ -127,9 +195,11 @@ Page({
   todeta(e) {
     console.log(e)
     let id = e.currentTarget.dataset.id
-    wx.navigateTo({
-      url: '../goodcourse/details/details?id=' + id + '&type=2',
-    })
+    if(id<100){
+      wx.navigateTo({
+        url: '../goodcourse/details/details?id=' + id + '&type=2',
+      })
+    } 
   },
   // 跳转轮播图
   swiper(e) {
@@ -152,7 +222,8 @@ Page({
       console.log(res)
       this.setData({
         list: res.data.list,
-        swiper: res.data.carousel
+        swiper: res.data.carousel,
+        assess:res.data.pingjia
       })
     })
   },
@@ -342,6 +413,30 @@ Page({
       })
     })
   },
+
+  getlist(a) {
+    let place = wx.getStorageSync('place')
+    http.get('/indexinterface/add_lesson_lists', {
+      latitude: place.latitude,
+      longitude: place.longitude,
+      search: a ? a : ''
+    }).then(res => {
+      console.log(res.data)
+      this.setData({
+        joinList: res.data
+      })
+    })
+    wx.hideLoading({
+      success: (res) => {},
+    })
+  },
+  // 轮播图切换
+  changeFun(e) {
+    this.setData({
+      centerItem: e.detail.current,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -354,7 +449,13 @@ Page({
     }
     // this.getimg()
     this.getUserLocation()
-
+    // 轮播图切换
+    var len = this.data.imgInfoArr.length;
+    var center = parseInt(len/2);
+    this.setData({
+      imgInfoArrLength: len,
+      centerItem: center
+    })
   },
 
   /**
@@ -373,6 +474,7 @@ Page({
         wx.setStorageSync('user', res.data)
       }
     })
+    this.getlist()
     if (wx.getStorageSync('user')) {
       this.setData({
         show: false,

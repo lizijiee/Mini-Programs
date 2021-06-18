@@ -222,7 +222,7 @@ Page({
 
     // if(options&&options.types){
     //   if(options.types == 1){
-    //     this.setData({button:'加入拼课'})
+    //     this.setData({button:'加入班级'})
     //   }else if(options.types == 3){
     //     this.setData({button:'购买'})
     //   }
@@ -230,7 +230,7 @@ Page({
     // 发起拼课用户与加入拼客用户相同
     if (options.course === 'join') {
       this.setData({
-        button: '加入拼课'
+        button: '加入班级'
       })
     }
 
