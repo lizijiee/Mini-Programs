@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitleText: 'blog页'
+  navigationBarTitleText: 'Blog页'
 }

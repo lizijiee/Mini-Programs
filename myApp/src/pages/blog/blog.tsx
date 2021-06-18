@@ -78,4 +78,3 @@ function Blog(props: imageProps) {
 }
 
 export default Blog;
-
