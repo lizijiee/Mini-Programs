@@ -1,0 +1,27 @@
+<view class="woap">
+  <wxs src="../../utils/filter.wxs" module="filter" />
+  <image class="back" src="{{filter.url(data.zhuanxiang_pic)}}"></image>
+
+
+  <view class="ima" bindtap="fanh">
+    <image src="../../image/user/right.png" class="fans"></image>
+  </view>
+
+
+  <view class="main">
+    <view class="left">
+      <view wx:for="{{left}}" wx:key='index' bindtap="navto" data-id="{{item.id}}">
+        <text style="background-image:url({{item.img}});background-size:cover"></text>
+        {{item.content}}
+      </view>
+    </view>
+    <view class="right">
+      <view wx:for="{{right}}" wx:key='index' bindtap="navto" data-id="{{item.id}}">
+        <text style="background-image:url({{item.img}});background-size:cover"></text>
+        {{item.content}}
+      </view>
+    </view>
+  </view>
+
+
+</view>

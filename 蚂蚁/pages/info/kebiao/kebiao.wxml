@@ -1,0 +1,47 @@
+<!--pages/info/kebiao/kebiao.wxml-->
+<van-empty description="暂无课表" wx:if="{{list.length<1}}" />
+<wxs src="../../../utils/filter.wxs" module="filter" />
+<view class="joinlesson">
+  <view class="joinlessonlist">
+    <view class="eve" wx:for="{{list}}" wx:key='index' bindtap="todeta" data-id="{{item}}">
+      <view class="ae">
+        <view class="left">
+          <image src="{{filter.url(item.course_pic)}}"></image>
+        </view>
+        <view class="right">
+          <view class="top">
+            <text>{{item.course_name}}</text>
+          </view>
+          <view class="place">{{item.lesson_place}}</view>
+          <!-- <view class="time">{{item.lessontime?item.lessontime:'暂定'}}</view> -->
+          <view class="time">
+            <text>{{filter.selectYear(item.lessontime)}}</text>
+            <image src="../../../image/icon/time.png"></image>
+            <text>{{filter.selectTime(item.lessontime)}}</text>
+          </view>
+          <view class="botom">
+            <text>{{item.course_age}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="headimg">
+        <view class="imgwrapper">
+          <image wx:for="{{item.pics}}" wx:for-item='value' wx:for-index='ind' src="{{value.avatarurl}}"
+            style="position:absolute;left:{{33*(ind)}}rpx;"></image>
+          <image src="../../../image/icon/circle.png" style="position:absolute;left:{{33*(item.pics.length)}}rpx">
+          </image>
+        </view>
+        <text style="margin-left:{{30*(item.pics.length+1)+100}}rpx"> {{item.pics.length}}人已加入班级</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <view class="woap">
+<view class="eve" wx:for="{{list}}" wx:key='index'>
+    <image src="../../../image/user/keb.png" class="bg"></image>
+    <scroll-view scroll-x class="ims" >
+      <image wx:for-item="newitem" wx:for-index="ind" wx:for="{{item.pics}}" wx:key='ind' src="{{newitem.avatarurl}}"></image>
+    </scroll-view>
+    <view class="desc">{{item.course_name}}</view>
+  </view> 
+</view>-->

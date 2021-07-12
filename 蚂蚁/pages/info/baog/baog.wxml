@@ -1,0 +1,6 @@
+<!--pages/info/baog/baog.wxml-->
+<wxs src="../../../utils/filter.wxs" module="filter" />
+<van-empty description="请联系管理员，上传体测报告。" wx:if="{{list.length<1}}" />
+<view class="woap" wx:if="{{list.length>=1}}">
+  <image src="{{filter.url(item.pic)}}" wx:for="{{list}}" wx:key='index' mode="aspectFill"></image>
+</view>

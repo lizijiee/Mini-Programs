@@ -1,5 +1,0 @@
-<!--pages/info/baog/baog.wxml-->
-<wxs src="../../../utils/filter.wxs" module="filter" />
-<view class="woap">
-  <image src="{{filter.url(item.pic)}}" wx:for="{{list}}" wx:key='index' mode="aspectFill"></image>
-</view>

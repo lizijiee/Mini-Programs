@@ -1,0 +1,72 @@
+<!--pages/info/sure/sure.wxml-->
+<wxs src='../../../utils/filter.wxs' module="filter"></wxs>
+<view class="woap">
+  <!-- 信息 -->
+  <view class="main">
+    <view class="left">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="right">
+      <view class="title">{{info.course_name}}</view>
+      <view class="age">
+          <text>{{info.age}}</text>
+          <text>{{info.classtype?info.classtype:'1V1'}}</text>
+      </view>
+      <view class="num">
+        <text>{{info.lesson_place}}</text>
+        <text>{{info.lessontime}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 优惠券信息 -->
+  <view class="xin">
+    <view class="youh" bindtap="xzyouh">
+      <text>优惠券</text>
+      <image src="../../../image/icon/xia.png" wx:if="{{!show}}"></image>
+      <text wx:if="{{show}}">5元优惠券</text>
+    </view>
+    <view class="jif">
+      <text>使用积分(当前共{{info.integral}}积分)</text>
+      <input type="text" value="{{value}}" bindinput="input" placeholder="0" maxlength="3" disabled="{{checked}}"/>
+    </view>
+
+    <view class="xins" wx:if="{{user.is_zhuanxiang == 1}}">
+      <text>新人专享好礼</text>
+      <van-checkbox value="{{ checked }}" bind:change="onChange" class="checkbox" icon-size='30rpx' checked-color='#FE5838'></van-checkbox>
+    </view>
+
+    <view class="jie">
+      <text class="yinf">应付金额</text>
+      <view>
+        <text wx:if="{{pirce}}">￥{{pirce}}</text>
+        <text>￥{{info.course_present_price}}</text>
+      </view>
+    </view>
+    <view class="protocol">
+      <van-checkbox value="{{ protocolChecked }}" bind:change="onChange" class="checkbox" icon-size='30rpx'
+        checked-color='#FE5838' shape="square"></van-checkbox>
+      <view>
+        <view style="display:inline">我已阅读并同意</view>
+        <navigator hover-class="none" style="display:inline" url='/pages/info/heto/heto'>
+          <view style="font-weight:bold;color:#F83636;display:inline">
+            《蚂蚁动力少儿体育上课须知》和《蚂蚁动力少儿体育服务合同》</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <button class="{{disabled?'ns':'btn'}}" disabled="{{disabled}}" bindtap="seve" wx:if="{{!confim}}">{{button}}</button>
+
+</view>
+
+<van-popup show="{{ coupshow }}" z-index='{{9999}}' bind:close="onClose" custom-style='border-radius: 20rpx;'>
+  <scroll-view scroll-y class="mains">
+    <view wx:for="{{info.coupon}}" wx:key='index'  wx:if="{{info.coupon.length != -1}}">
+      {{item.coupon_money}}元{{item.coupon_name}}
+      <text bindtap="cut" data-index="{{index}}" wx:if="{{item.checked == false}}">选择</text>
+      <text bindtap="cut" data-index="{{index}}" wx:if="{{item.checked == true}}">取消</text>
+    </view>
+    <view wx:if="{{!(info.coupon == [])}}" class="youhuiquan">暂无优惠券</view>
+  </scroll-view>
+</van-popup>

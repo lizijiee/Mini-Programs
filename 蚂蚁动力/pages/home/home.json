@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "van-popup": "@vant/weapp/popup/index"
-  },
-  "navigationBarTitleText": "首页",
-  "navigationStyle":"custom"
-}

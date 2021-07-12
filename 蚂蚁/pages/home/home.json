@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-divider": "@vant/weapp/divider/index"
+  },
+  "navigationBarTitleText": "蚂蚁动力", 
+  "navigationBarTextStyle":"white",
+  "navigationStyle":"custom"
+}

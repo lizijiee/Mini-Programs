@@ -1,0 +1,54 @@
+<!--pages/huo/info/info.wxml-->
+<!-- <view class="title">孩子信息</view> -->
+<view class="woap">
+  <view class="lst">
+    <text class="tiile">课程名称：</text>
+    <input type="text" value="{{course_name}}" placeholder="请输入课程名称" bindinput="names" disabled="disabled" />
+  </view>
+  <view class="lst">
+    <text class="tiile">课程时间：</text>
+    <input type="text" value="{{course_date}}" placeholder="请输入课程时间" bindinput="names" disabled="disabled" />
+  </view>
+  <view class="lst">
+    <text class="tiile">班级类型：</text>
+    <input type="text" value="{{course_type}}" placeholder="请输入班级类型" bindinput="names" disabled="disabled" />
+  </view>
+  <view class="lst">
+    <text class="tiile">年龄段：</text>
+    <input type="text" value="{{course_age}}" placeholder="请输入年龄段" bindinput="names" disabled="disabled" />
+  </view>
+  <view class="lst">
+    <text class="tiile">场地类型：</text>
+    <input type="text" value="{{course_place_type}}" placeholder="请输入场地类型" bindinput="names" disabled="disabled" />
+  </view>
+  <view class="lst">
+    <text class="tiile">场地地址：</text>
+    <input type="text" value="{{course_place}}" placeholder="请输入场地地址" bindinput="names" disabled="disabled" />
+  </view>
+  <view class="lst">
+    <text class="tiile">场地详细地址：</text>
+    <input type="text" value="{{course_place_detail}}" placeholder="请输入详细地址" bindinput="names" disabled="disabled" />
+  </view>
+  <view class="lst">
+    <text class="tiile">姓名：</text>
+    <input type="text" value="{{name}}" placeholder="请输入孩子姓名" bindinput="names" />
+  </view>
+  <view class="lst">
+    <text class="tiile">年龄：</text>
+    <input type="number" value="{{age}}" placeholder="请输入孩子年龄" bindinput="ages" />
+  </view>
+  <!-- <view class="lst">
+    <text>身份证：</text>
+    <input type="text" value="{{code}}" placeholder="请输入孩子身份证号码" bindinput="codes"/>
+  </view> -->
+  <view class="lst">
+    <text class="tiile">电话：</text>
+    <input type="text" value="{{tel}}" placeholder="请输入家长联系电话" bindinput="tels" />
+  </view>
+  <view class="lst">
+    <text class="tiile">验证码：</text>
+    <input type="text" style="width:50%" value="{{numcode}}" placeholder="请输入验证码" bindinput="numcode" />
+    <text style="width:30%" bindtap="getcode">{{timecode}}</text>
+  </view>
+</view>
+<view class="btn" bindtap="addh">加入班级</view>

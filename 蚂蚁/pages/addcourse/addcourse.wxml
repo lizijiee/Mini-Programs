@@ -1,0 +1,83 @@
+<!--pages/addcourse/addcourse.wxml-->
+<tab active='{{1}}'></tab>
+<wxs src="../../utils/filter.wxs" module="filter" />
+<view class="seach">
+  <image src="../../image/icon/search.png"></image>
+  <input type="text" placeholder="输入地区或课程关键词" bindinput="change" value="{{input}}" bindconfirm='seach' />
+</view>
+
+<van-dropdown-menu z-index='{{9999}}'>
+  <van-dropdown-item value="{{ index1 }}" options="{{ option1 }}" bind:change='screen' />
+  <van-dropdown-item value="{{ index2 }}" options="{{option2}}" bindtap='morpx' />
+</van-dropdown-menu>
+<van-empty description="暂无拼课" wx:if="{{list.length<1}}" />
+
+<!-- <view class="woap">
+  <view class="eve" wx:for="{{list}}" wx:key='index' bindtap="todeta" data-id="{{item}}">
+    <view class="ae">
+      <view class="left">
+      <image src="{{filter.url(item.course_pic)}}"></image>
+    </view>
+    <view class="right">
+      <view class="top">
+        <text>{{item.course_name}}</text>
+        <view>距离<text>{{item.distance}}</text>KM</view>
+      </view>
+      <view class="time">{{item.lessontime?item.lessontime:'暂定'}}</view>
+      <view class="botom">
+        <text>{{item.course_age}}</text>
+       无用 <text>{{item.course_name}}</text> 
+        <text>{{item.is_group}}</text>
+        <text>{{item.people_num + '/'+item.max_people_num}}人</text>
+      </view>
+    </view>
+    </view>
+
+    <view class="headimg" >
+      <image wx:for="{{item.head_pics}}" wx:for-item='value' wx:for-index='ind' src="{{value.avatarurl}}"></image>
+    </view>
+
+  </view>
+
+</view> -->
+<view class="joinlesson">
+  <view class="joinlessonlist">
+    <view class="eve" wx:for="{{list}}" wx:key='index' bindtap="todeta" data-id="{{item}}">
+      <view class="ae">
+        <view class="left">
+          <image src="{{filter.url(item.course_pic)}}"></image>
+        </view>
+        <view class="right">
+          <view class="top">
+            <text>{{item.course_name}}</text>
+            <view>距离: <text>{{item.distance}}</text>KM</view>
+          </view>
+          <view class="place">{{item.lesson_place}}</view>
+          <!-- <view class="time">{{item.lessontime?item.lessontime:'暂定'}}</view> -->
+          <view class="time">
+            <text>{{filter.selectYear(item.lessontime)}}</text>
+            <image src="../../image/icon/time.png"></image>
+            <text>{{filter.selectTime(item.lessontime)}}</text>
+          </view>
+          <view class="botom">
+            <text>{{item.course_age}}</text>
+            <!-- <text>{{item.course_name}}</text> -->
+            <text>{{item.is_group}}</text>
+            <text>{{item.people_num + '/'+item.max_people_num}}人</text>
+          </view>
+        </view>
+      </view>
+      <view class="headimg">
+        <view class="imgwrapper">
+          <image wx:for="{{item.head_pics}}" wx:for-item='value' wx:for-index='ind' src="{{value.avatarurl}}"
+            style="position:absolute;left:{{33*(ind)}}rpx;"></image>
+          <image src="../../image/icon/circle.png" style="position:absolute;left:{{33*(item.head_pics.length)}}rpx">
+          </image>
+        </view>
+        <text style="margin-left:{{30*(item.head_pics.length+1)+100}}rpx"> {{item.head_pics.length}}人已加入班级</text>
+      </view>
+    </view>
+
+  </view>
+</view>
+<!-- <view class="kong"></view> -->

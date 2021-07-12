@@ -1,0 +1,158 @@
+/* pages/info/kebiao/kebiao.wxss */
+/* 加入班级组件样式 */
+/* pages/addcourse/addcourse.wxss */
+
+
+
+/* 加入班级组件样式 */
+.joinlesson{
+  width: 662rpx;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0 20rpx 0 20rpx;
+  border-top: 1px solid #ebedf0;
+  position: relative;
+  margin-bottom: 160rpx;
+}
+
+.eve {
+  border-bottom: 1px solid #ebedf0;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 30rpx;
+  padding-top: 20rpx;
+}
+
+.right {
+  width:60%;
+  padding: 20rpx 0;
+}
+
+.ae{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left image {
+  width: 228rpx;
+  height: 180rpx;
+  border-radius: 15rpx;
+}
+
+.top{
+  width: 100%;
+  height: inherit;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #0C0C0C;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top>text {
+  font-size: 27rpx;
+  margin-bottom: 10rpx;
+  color: #000;
+}
+
+.top>view {
+  font-size: 19rpx;
+  color: #999999;
+}
+
+.top>view text {
+  font-size: 19rpx;
+  color: red;
+}
+
+ .place {
+  font-size: 19rpx;
+  color: #333333;
+  margin-bottom: 9rpx;
+}
+
+ .time {
+  font-size: 26rpx;
+  color: #666;
+  /* height: 70rpx; */
+  display: flex;
+  margin-bottom:10rpx;
+}
+
+ .time text {
+  font-size: 20rpx;
+  color: #999999;
+}
+
+ .time image {
+  height: 20rpx;
+  width: 20rpx;
+  margin: 2rpx 8rpx 16rpx 39rpx;
+}
+
+.botom{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.joinlessonlist .botom text {
+  /* width: inherit; */
+  font-size: 20rpx;
+  color: #F96041;
+  padding: 8rpx 20rpx;
+  border: 1px solid #F96041;
+  background: white;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+
+.joinlessonlist .botom text:nth-child(1) {
+  /* width: inherit; */
+  font-size: 20rpx;
+  color: #237EEE;
+  padding: 8rpx 20rpx;
+  border: 1px solid #237EEE;
+  background: white;
+  border-radius: 20rpx;
+}
+
+.joinlessonlist .botom text:nth-child(3) {
+  margin-right: 0;
+}
+
+.joinlessonlist .headimg {
+  height: 70rpx;
+  overflow: inherit;
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.joinlessonlist .headimg .imgwrapper {
+  position: relative;
+  height: inherit;
+
+}
+.joinlessonlist .headimg image:nth-child(1){
+  margin-left:0rpx ;
+} 
+.joinlessonlist .headimg image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin: 0 10rpx;
+  margin-top: 18rpx;
+}
+
+.joinlessonlist .headimg>text {
+  /* width: 100%; */
+  text-align: right;
+  margin-top: 30rpx;
+  color: #999999;
+  font-size: 19rpx;
+}
