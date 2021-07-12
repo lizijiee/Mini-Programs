@@ -35,57 +35,54 @@ Page({
     longitude: '',
     ressshow: false, //地址选择
     resslist: [], //地址选择
-    joinList: [], // 附近拼课班级列表,
-    msgList: [{
-      title: '蚂蚁动力教育活动火爆进行中...'
-    }, {
-      title: '蚂蚁动力教育活动火爆进行中...'
-    }],
-    lessonList: [{
-        id: 2,
-        name: '跳绳',
-        src: '../../image/icon/icon_skip.png'
+    joinList:[], // 附近拼课班级列表
+    lessonList:[
+      {
+        id:2,
+        name:'跳绳',
+        src:'../../image/icon/icon_skip.png'
       },
       {
-        id: 5,
-        name: '体适能',
-        src: '../../image/icon/icon_tishineng.png'
+        id:5,
+        name:'体适能',
+        src:'../../image/icon/icon_tishineng.png'
       },
       {
-        id: 8,
-        name: '小体达标',
-        src: '../../image/icon/icon_xiaotidabiao.png'
+        id:8,
+        name:'小体适能',
+        src:'../../image/icon/icon_xiaotidabiao.png'
       },
       {
-        id: 10,
-        name: '中体达标',
-        src: '../../image/icon/icon_zhongtidabiao.png'
+        id:10,
+        name:'中体适能',
+        src:'../../image/icon/icon_zhongtidabiao.png'
       },
       {
-        id: 6,
-        name: '武道专项',
-        src: '../../image/icon/icon_wudaosanxiang.png'
+        id:6,
+        name:'武道三项',
+        src:'../../image/icon/icon_wudaosanxiang.png'
       },
       {
-        id: null,
-        name: '活动赛事',
-        src: '../../image/icon/icon_huodongsaishi.png'
+        id:100,
+        name:'活动赛事',
+        src:'../../image/icon/icon_huodongsaishi.png'
       },
       {
-        id: 101,
-        name: '蚂蚁专享',
-        src: '../../image/icon/icon_mayizhuanxiang.png'
+        id:101,
+        name:'蚂蚁专享',
+        src:'../../image/icon/icon_mayizhuanxiang.png'
       },
       {
-        id: null,
-        name: '更多',
-        src: '../../image/icon/icon_gengduo.png'
+        id:102,
+        name:'更多',
+        src:'../../image/icon/icon_gengduo.png'
       }
     ],
-    imgInfoArrLength: 0, // 轮播图列表的长度
-    centerItem: 0, // 居中项的位置
-    assess: [], // 评价列表
-    imgInfoArr: [{
+    imgInfoArrLength: 0,  // 轮播图列表的长度
+    centerItem: 0,  // 居中项的位置
+    assess:[], // 评价列表
+    imgInfoArr: [
+      {
         src: '../../image/icon/commit.png',
         text: '测试数据',
         id: 0
@@ -104,9 +101,7 @@ Page({
         src: '../../image/icon/commit.png',
         text: '测试数据',
         id: 3
-      }
-    ],
-    
+      }]
   },
   // 授权登录
   login() {
@@ -214,32 +209,12 @@ Page({
   // 跳转详情
   todeta(e) {
     console.log(e)
-    let id = e.currentTarget.dataset.id;
-    if (id === null) {
-      wx.showToast({
-        title: '功能开发中...',
-        icon: 'none'
-      })
-      return
-    }
-    if (id.people_num && id.people_num === id.max_people_num) {
-      wx.showToast({
-        title: '该班级已满员，您可发起拼班。',
-        icon: 'none'
-      })
-      return
-    }
-    if (id < 100) {
+    let id = e.currentTarget.dataset.id
+    if(id<100){
       wx.navigateTo({
         url: '../goodcourse/details/details?id=' + id + '&type=2',
       })
-    }
-    if (id === 101) {
-      wx.switchTab({
-        url: '../goodcourse/goodcourse',
-      })
-    }
-
+    } 
   },
   // 跳转轮播图
   swiper(e) {
@@ -264,7 +239,7 @@ Page({
         msgList:res.data.gundong,
         list: res.data.list,
         swiper: res.data.carousel,
-        assess: res.data.pingjia
+        assess:res.data.pingjia
       })
     })
   },
@@ -492,7 +467,7 @@ Page({
     this.getUserLocation()
     // 轮播图切换
     var len = this.data.imgInfoArr.length;
-    var center = parseInt(len / 2);
+    var center = parseInt(len/2);
     this.setData({
       imgInfoArrLength: len,
       centerItem: center

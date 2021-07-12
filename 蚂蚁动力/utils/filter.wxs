@@ -1,0 +1,16 @@
+
+var url = function(url){
+  return 'https://myxqty.com' + url
+}
+var selectYear=function(ele){
+  return ele.split(' ')[0]
+}
+var selectTime=function(ele){
+  return ele.split(' ')[1]
+}
+
+module.exports = {
+  url: url,
+  selectYear:selectYear,
+  selectTime:selectTime,
+};

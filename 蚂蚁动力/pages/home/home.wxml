@@ -1,0 +1,203 @@
+<!--pages/home/home.wxml-->
+<tab active='{{0}}'></tab>
+<wxs src="../../utils/filter.wxs" module="filter" />
+<!-- 导航栏 -->
+<view class="navs">
+  <text>蚂蚁动力</text>
+
+  <!-- <view class="ation" bindtap="showPopup">
+    <text bindtap="getlocation">{{place}}</text>
+    <image src="../../image/icon/bottom.png"></image>
+  </view> -->
+</view>
+<!-- <view>
+  <official-account bindload="bindload" binderror="binderror"></official-account>
+</view> -->
+<view class="woap">
+  <!-- 头部 -->
+  <view class="head">
+    <!-- 头像 -->
+    <view class="headimg">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <!-- 登记名称 -->
+    <view class="name">
+      <text wx:if="{{!show}}">{{user.nickname}}</text>
+      <!-- 版本暂停使用 <text wx:if="{{!show}}">学习达人</text> -->
+      <text wx:if="{{show}}" bindtap="login">未登录</text>
+    </view>
+    <!-- 搜索框 -->
+    <view class="seach">
+      <image src="../../image/icon/search.png"></image>
+      <input type="text" placeholder="输入地区或课程关键词" value="{{input}}" bindinput="change" bindconfirm='seach' />
+      <scroll-view scroll-y class="lists" wx:if="{{shows}}">
+        <text wx:for="{{seachlist}}" wx:key='index' bindtap="kec" data-id="{{item.id}}">{{item.course_name}}</text>
+      </scroll-view>
+    </view>
+    <!-- 分割线 -->
+    <view class="line"></view>
+
+    <!-- <view class="seach">
+      <image src="../../image/icon/search.png"></image>
+      <input type="text" placeholder="输入地区或课程关键词..." value="{{input}}" bindinput="change" bindconfirm='seach' />
+      <scroll-view scroll-y class="lists" wx:if="{{shows}}">
+        <text wx:for="{{seachlist}}" wx:key='index' bindtap="kec" data-id="{{item.id}}">{{item.course_name}}</text>
+      </scroll-view>
+    </view> -->
+    <!-- 发起拼课 -->
+    <view class="int" bindtap="navpk">
+      <image src="../../image/icon/initiate.png"></image>
+      <text>发起拼课</text>
+    </view>
+
+    <!-- 加入班级 -->
+    <view class="selectlesson">
+      <!-- <view class="joinbutton" wx:for="{{swiper}" wx:key='index' data-id="{{item.id}}"></view> -->
+      <view class="joinbutton" wx:for="{{lessonList}}" wx:key='index' data-id="{{item.id}}" bindtap="todeta">
+        <image src="{{item.src}}"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 新人好礼 -->
+  <view class="newuser" bindtap="xinren">
+    <image src="../../image/icon/newuser.png"></image>
+    <view class="notice">
+      <view class="noticeitem">
+        <image src='../../image/icon/check.png'></image>
+        <text>3-15岁</text>
+      </view>
+      <view class="noticeitem">
+        <image src='../../image/icon/check.png'></image>
+        <text>认证教练</text>
+      </view>
+      <view class="noticeitem">
+        <image src='../../image/icon/check.png'></image>
+        <text>上门授课</text>
+      </view>
+      <view class="noticeitem">
+        <image src='../../image/icon/check.png'></image>
+        <text>量身定制</text>
+      </view>
+    </view>
+  </view>
+  <!-- 选项卡 -->
+  <!-- <view class="display">
+  <image src="{{item}}" wx:for="{{display}}" wx:key='index'></image>
+</view> -->
+
+  <!-- 加入班级 -->
+  <view class="joinlesson">
+    <view>
+      <icon></icon>
+      <text class="title">加入班级</text>
+      <view class="line">
+        <van-divider />
+      </view>
+      <!-- <view class="more">
+        <text>全部课程</text>
+        <image src="../../image/icon/arrow.png"></image>
+      </view> -->
+    </view>
+
+    <!-- 拼课班级列表 -->
+    <view class="joinlessonlist">
+      <view class="eve" wx:for="{{joinList}}" wx:key='index' bindtap="todeta" data-id="{{item.id}}">
+        <view class="ae">
+          <view class="left">
+            <image src="{{filter.url(item.course_pic)}}"></image>
+          </view>
+          <view class="right">
+            <view class="top">
+              <text>{{item.course_name}}</text>
+              <view>距离: <text>{{item.distance}}</text>KM</view>
+            </view>
+            <view class="place">{{item.lesson_place}}</view>
+            <!-- <view class="time">{{item.lessontime?item.lessontime:'暂定'}}</view> -->
+            <view class="time">
+              <text>{{filter.selectYear(item.lessontime)}}</text>
+              <image src="../../image/icon/time.png"></image>
+              <text>{{filter.selectTime(item.lessontime)}}</text>
+            </view>
+            <view class="botom">
+              <text>{{item.course_age}}</text>
+              <!-- <text>{{item.course_name}}</text> -->
+              <text>{{item.is_group}}</text>
+              <text>{{item.people_num + '/'+item.max_people_num}}人</text>
+            </view>
+          </view>
+        </view>
+        <view class="headimg">
+          <view class="imgwrapper">
+            <image wx:for="{{item.head_pics}}" wx:for-item='value' wx:for-index='ind' src="{{value.avatarurl}}"
+              style="position:absolute;left:{{33*(ind)}}rpx;"></image>
+            <image src="../../image/icon/circle.png" style="position:absolute;left:{{33*(item.head_pics.length)}}rpx">
+            </image>
+          </view>
+          <text style="margin-left:{{30*(item.head_pics.length+1)+100}}rpx"> {{item.head_pics.length}}人已加入班级</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <!-- 用户评价 -->
+  <view class="joinlesson usercommit">
+    <view>
+      <icon></icon>
+      <text class="title">用户评价</text>
+    </view>
+    <swiper display-multiple-items='1' current='{{ centerItem }}' bindchange='changeFun' circular='true'
+      previous-margin='85' next-margin='85' easing-function='easeInOutCubic' activeItem="slider-item-active">
+      <block wx:for="{{assess}}">
+        <swiper-item class="slider-item {{centerItem===index?'swiper.activeItem':''}}">
+          <view class='optionBox' style='text-align:center'>
+            <view class='mask' wx:if='{{ index != centerItem }}'></view>
+            <image class="slider-item-img" src="https://myxqty.com{{item.comment_pic}}" mode='aspectFit' />
+            <!-- <image src="{{item.src}}" mode='aspectFit' class="activeItem"  wx:if='{{ index === centerItem }}'/> -->
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- banner_swiper -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+    class="banner">
+    <block wx:for="{{swiper}}" wx:key='index'>
+      <swiper-item bindtap="swiper" data-id="{{item.id}}" data-type="{{item.type}}">
+        <image src="{{filter.url(item.carousel_img)}}" class="slide-image" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 信息 -->
+  <!-- <view class="culum">
+    <view class="title"><text>精选课程</text>
+      <image src="../../image/icon/homezuan.png" mode="aspectFill"></image>
+    </view>
+    主体信息 
+    <view class="eves">
+      <view class="eve" wx:for='{{list}}' wx:key='index' bindtap="todeta" data-id="{{item.id}}">
+        <view class="baer">
+          <image src='{{filter.url(item.course_pic)}}'></image>
+        </view>
+        <text class="desc">{{item.course_descrip}}</text>
+      </view>
+    </view>
+  </view> -->
+
+  <view class="kong"></view>
+</view>
+
+
+
+<van-popup show="{{ ressshow }}" z-index='{{9999}}' bind:close="onClose" custom-style='border-radius: 20rpx;'>
+  <scroll-view scroll-y class="mains">
+    <view bindtap="dqcut">当前位置</view>
+    <view wx:for="{{resslist}}" wx:key='index' bindtap="cut" data-item="{{item}}">
+      {{item.address}}
+    </view>
+  </scroll-view>
+</van-popup>

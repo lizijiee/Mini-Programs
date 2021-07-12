@@ -117,7 +117,7 @@ Page({
           let data = {
             ...app.globalData.orderinfo,
             child_name: item.name,
-            age: item.age+'岁',
+            age: item.age,
             contact_phone: item.tel,
             code: item.numcode
           }
