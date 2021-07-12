@@ -3,6 +3,7 @@
 		{
 			"path": "pages/note/note",
 			"style": {
+				// "navigationStyle": "custom",
 				"navigationBarTitleText": "SmartPen5.0.0"
 			}
 		},
