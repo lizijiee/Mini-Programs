@@ -83,7 +83,16 @@
 		/**
 		 * 用户点击右上角分享
 		 */
-		onShareAppMessage: function() {},
+		onShareAppMessage: function() {
+			var data = uni.getMenuButtonBoundingClientRect();
+			//单位px
+			console.log('菜单按键宽度：', data.width)
+			console.log('菜单按键高度：', data.height)
+			console.log('菜单按键上边界坐标：', data.top)
+			console.log('菜单按键右边界坐标：', data.right)
+			console.log('菜单按键下边界坐标：', data.bottom)
+			console.log('菜单按键左边界坐标：', data.left)
+		},
 		methods: {
 			// 搜索附近的蓝牙
 			searchBlueTooth() {
@@ -105,7 +114,7 @@
 				let deviceId = e.currentTarget.dataset.deviceid;
 				let penName = e.currentTarget.dataset.devicename;
 				let mac = e.currentTarget.dataset.mac;
-				console.log('tqlSDKtqlSDKtqlSDKtqlSDK',tqlSDK)
+				console.log('tqlSDKtqlSDKtqlSDKtqlSDK', tqlSDK)
 				tqlSDK.createBlueToothConnection(deviceId, () => {
 					app.globalData.deviceId = deviceId;
 					app.globalData.deviceName = penName;
@@ -124,7 +133,7 @@
 					uni.hideToast();
 					uni.showToast({
 						title: "连接成功",
-						success:()=>{
+						success: () => {
 							console.log('返回上一级页面~~~~~~')
 							uni.navigateBack({
 								delta: 0
