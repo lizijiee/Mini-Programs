@@ -3,7 +3,6 @@
 	export default {
 	  onLaunch() {
 	    // 展示本地存储能力
-		
 	    this.globalData.tqlSDK = new AllSDK(3);
 	  },
 	

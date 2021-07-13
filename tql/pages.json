@@ -1,27 +1,29 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/note/note",
+			"path": "pages/index/index",
 			"style": {
 				// "navigationStyle": "custom",
 				"navigationBarTitleText": "SmartPen5.0.0"
 			}
 		},
 		{
-			"path": "pages/index/index",
+			"path": "pages/draw/draw",
 			"style": {
-				"navigationStyle": "custom",
+				// "navigationStyle": "custom",
 				"navigationBarTitleText": "SmartPen5.0.0"
 			}
 		},
 		{
 			"path": "pages/search/search",
-			"style": {}
+			"style": {
+				"navigationBarTitleText": "搜索蓝牙..."
+			}
 		},
 		{
 			"path": "pages/user/user",
 			"style": {
-				"navigationBarTitleText": "我的信息"
+				"navigationBarTitleText": "个人信息"
 			}
 		}
 	],
@@ -32,7 +34,7 @@
 		"navigationBarTextStyle": "black"
 	},
 	"tabBar": {
-		"custom": true,
+		// "custom": true,
 		"color": "#7A7E83",
 		"selectedColor": "#EC6938",
 		"borderStyle": "white",
@@ -41,9 +43,10 @@
 		"backgroundColor": "#fff",
 		"list": [{
 			"text": "笔记",
-			"pagePath": "pages/note/note",
+			"pagePath": "pages/index/index",
 			"iconPath": "static/icon/replay.png",
-			"selectedIconPath": "static/icon/replayChosen.png"
+			"selectedIconPath": "static/icon/replayChosen.png",
+			"backgroundColor": "red"
 		}, {
 			"text": "我的",
 			"pagePath": "pages/user/user",
