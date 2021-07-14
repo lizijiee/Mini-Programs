@@ -253,9 +253,16 @@
 							console.log('_this.canvasInfo', _this.canvasInfo)
 							// _this.canvasInfo.draw(false, (() => {
 							uni.canvasToTempFilePath({
-								canvas: _this.canvasInfo,
+								// canvas: _this.canvasInfo,
 								canvasId: 'myCanvas',
+								fail: function() {
+									uni.showToast({
+										title: "保存失败canvasToTempFilePath，请稍后重试",
+										icon: "none"
+									});
+								},
 								success(res) {
+									console.log('canvasToTempFilePath',res)
 									uni.compressImage({
 										src: res.tempFilePath,
 										quality: 100,
