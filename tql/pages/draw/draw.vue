@@ -54,7 +54,11 @@
 				deviceName: null,
 			}
 		},
-		onLoad() {
+		onLoad(options) {
+			console.log('options',options);
+			if(options.id){
+				// 发起图片加载列表请求;
+			}
 			// 页面重加载时将所有的监听事件移除一遍在监听 防止相同事件多次重复监听
 			uni.getSystemInfo({
 				success: result => {

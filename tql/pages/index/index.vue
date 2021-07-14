@@ -1,42 +1,13 @@
 <template>
 	<view class="wrapper">
 		<image class="crete-note" src="@/static/images/add.png" @click="createControl" />
-		<view class="note-wrapper" @click="detailControl">
+		<view class="note-wrapper" @click="detailControl(noteObj)" v-for="noteObj in notesList" :data-index=nodeObj.id>
 			<view class="note-title">
-				<text class="text">05年14日 14:59 笔记</text>
-				<text class="time">2021-05-14</text>
+				<text class="text">{{noteObj.time}}</text>
+				<text class="time">{{noteObj.year}}</text>
 			</view>
 			<view class="note-image">
-				<image src="@/static/OK_42.png" mode=""></image>
-			</view>
-		</view>
-		<view class="note-wrapper" @click="detailControl">
-
-			<view class="note-title">
-				<text class="text">05年14日 14:59 笔记</text>
-				<text class="time">2021-05-14</text>
-			</view>
-			<view class="note-image">
-				<image src="@/static/OK_42.png" mode=""></image>
-			</view>
-		</view>
-		<view class="note-wrapper" @click="detailControl">
-
-			<view class="note-title">
-				<text class="text">05年14日 14:59 笔记</text>
-				<text class="time">2021-05-14</text>
-			</view>
-			<view class="note-image">
-				<image src="@/static/OK_42.png" mode=""></image>
-			</view>
-		</view>
-		<view class="note-wrapper" @click="detailControl">
-			<view class="note-title">
-				<text class="text">05年14日 14:59 笔记</text>
-				<text class="time">2021-05-14</text>
-			</view>
-			<view class="note-image">
-				<image src="@/static/OK_42.png" mode=""></image>
+				<image :src="noteObj.image" mode=""></image>
 			</view>
 		</view>
 	</view>
@@ -47,19 +18,40 @@
 		data() {
 			return {
 				title: 'component',
+				notesList: [{
+					year: '05年14日 14:59 笔记',
+					time: '2021-05-14',
+					image: "/static/OK_42.png",
+					id: 1
+				}, {
+					year: '05年14日 14:59 笔记',
+					time: '2021-05-14',
+					image: "/static/OK_42.png",
+					id: 2
+				}, {
+					year: '05年14日 14:59 笔记',
+					time: '2021-05-14',
+					image: "/static/OK_42.png",
+					id: 3
+				}, {
+					year: '05年14日 14:59 笔记',
+					time: '2021-05-14',
+					image: "/static/OK_42.png",
+					id: 4
+				}]
 			}
 		},
 		onShow() {},
 		onLoad() {},
 		methods: {
-			createControl() {
+			createControl(ele) {
 				uni.redirectTo({
 					url: '../draw/draw'
 				});
 			},
-			detailControl() {
+			detailControl(ele) {
 				uni.redirectTo({
-					url: '../draw/draw'
+					url: `../draw/draw?id=${ele.id}`
 				});
 				// 重新获取图片列表，设为初始值
 				// 图片组件内对imgs增加初始值赋值
