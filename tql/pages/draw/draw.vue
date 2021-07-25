@@ -236,6 +236,52 @@
 					});
 				});
 			},
+			saveImage() {
+				uni.showLoading({
+					title: '保存中...'
+				});
+				const _this = this;
+				setTimeout(function() {
+					uni.canvasToTempFilePath({
+						x: 0,
+						y: 0,
+						width: _this.canvasW,
+						height: _this.canvasH,
+						destWidth: _this.canvasW,
+						destHeight: _this.canvasH,
+						quality: 1,
+						fileType: 'jpg',
+						canvasId: 'myCanvas',
+						canvas: _this.canvasInfo.canvas,
+						success: (res) => {
+							uni.saveImageToPhotosAlbum({
+								filePath: res.tempFilePath,
+								success: function(res) {
+									console.log('保存成功', res)
+									uni.hideLoading();
+									uni.showToast({
+										icon: 'none',
+										position: 'bottom',
+										title: "图片已下载至【图库】，请打开【图库】查看", // res.tempFilePath
+									});
+								},
+								fail: function() {
+									uni.showToast({
+										title: "保存失败，请稍后重试",
+										icon: "none"
+									});
+								}
+							});
+						},
+						fail: function() {
+							uni.showToast({
+								title: '生成图片失败',
+								icon: 'none'
+							});
+						}
+					})
+				}, 500)
+			},
 			// 显示分享
 			handleShowShare() {
 				this.shareState = true;
@@ -244,55 +290,7 @@
 					itemList: ['保存图片', '保存PDF'], // 按钮顺序不能改变
 					success: function(res) {
 						if (res.tapIndex === 0) {
-							uni.showLoading({
-								title: '保存中...'
-							});
-							setTimeout(function() {
-								uni.hideLoading();
-							}, 6000);
-							console.log('_this.canvasInfo', _this.canvasInfo)
-							// _this.canvasInfo.draw(false, (() => {
-							uni.canvasToTempFilePath({
-								// canvas: _this.canvasInfo,
-								canvasId: 'myCanvas',
-								fail: function() {
-									uni.showToast({
-										title: "保存失败canvasToTempFilePath，请稍后重试",
-										icon: "none"
-									});
-								},
-								success(res) {
-									console.log('canvasToTempFilePath',res)
-									uni.compressImage({
-										src: res.tempFilePath,
-										quality: 100,
-										success: res => {
-											console.log('res.tempFilePath', res)
-											uni.saveImageToPhotosAlbum({
-												filePath: res.tempFilePath,
-												success: function(res) {
-													console.log('保存成功', res)
-													uni.hideLoading();
-													uni.showToast({
-														icon: 'none',
-														position: 'bottom',
-														title: "图片已下载至【图库】，请打开【图库】查看", // res.tempFilePath
-													});
-												},
-												fail: function() {
-													uni.showToast({
-														title: "保存失败，请稍后重试",
-														icon: "none"
-													});
-												}
-											});
-										}
-									})
-								}
-							})
-							// }));
-							console.log(_this.canvasInfo)
-							// console.log('选中了第' + (res.tapIndex + 1) + '个按钮');
+							_this.saveImage();
 						}
 					},
 					fail: function(res) {
@@ -305,6 +303,7 @@
 					url: '../index/index'
 				});
 			}
+
 		}
 	}
 </script>

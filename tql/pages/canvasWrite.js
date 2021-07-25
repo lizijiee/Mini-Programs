@@ -63,9 +63,9 @@ class myCanvas {
         resolve(res[0]);
       });
     });
+	console.log(' this.canvasNode.node', this.canvasNode.node)
     this.canvas = this.canvasNode.node;
     this.ctx = this.canvas.getContext('2d'); // 以下为canvas的缩放比例 默认为2倍 如有其它需求 请自行更改
-
     this.canvas.width = canvasWidth * 2;
     this.canvas.height = canvasHeight * 2;
     this.imgUrls = imgUrl;
@@ -83,11 +83,11 @@ class myCanvas {
 
 
   async drawImage(imgUrl, x1, y1, x2, y2) {
+	  
     if (!this.allImage[imgUrl]) {
       this.allImage[imgUrl] = await new Promise(resolve => {
         const img = this.canvas.createImage();
         img.src = imgUrl;
-
         img.onload = () => {
           resolve(img);
         };
