@@ -46,6 +46,7 @@ Page({
    */
   onLoad: function (options) {
     this.getsale()
+    console.log('wx.getStorageSync(user)',wx.getStorageSync('user'))
     this.setData({
       user:wx.getStorageSync('user')
     })

@@ -49,7 +49,7 @@
   margin-bottom: 25rpx;
 }
 
-.left text {
+.left image {
   width: 110rpx;
   height: 110rpx;
   line-height: 130rpx;
@@ -64,7 +64,7 @@
   margin-bottom: 8rpx;
 }
 
-.left text:nth-child(2) {
+.left image:nth-child(2) {
   margin-left: 50rpx;
 }
 .main .right {
@@ -78,7 +78,7 @@
   margin-left: 40rpx;
 } */
 
-.right text {
+.right image {
   width: 110rpx;
   height: 110rpx;
   line-height: 130rpx;
@@ -92,6 +92,6 @@
   margin-bottom: 8rpx;
 }
 
-.right text:nth-child(2) {
+.right image:nth-child(2) {
   margin-left: 20rpx;
 }

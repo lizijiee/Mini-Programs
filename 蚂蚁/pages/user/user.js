@@ -15,7 +15,7 @@ Page({
       {name:'体测报告',icon:'../../image/user/bg.png',to:'../info/baog/baog'},
       {name:'服务合同',icon:'../../image/user/hetong.png',to:'../info/heto/heto'},
       // {name:'服务合同',icon:'../../image/user/hetong.png',to:''},
-      {name:'我的班主任',icon:'../../image/user/banzhur.png',to:'1'},
+      {name:'咨询客服',icon:'../../image/user/banzhur.png',to:'1'},
       
 
     ],
@@ -107,6 +107,7 @@ Page({
           avatarurl:url,
           share_id:shareid?shareid:''
         }).then(res=>{
+          console.log(res.data)
           _this.setData({
             show:false,
             user:res.data

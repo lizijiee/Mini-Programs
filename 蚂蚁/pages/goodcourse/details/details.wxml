@@ -22,6 +22,7 @@
     <!-- 详情说明 -->
     <view class="lars">
       <view><text>课程时间：</text><text>{{data.course_time}}</text></view>
+      <!-- <view><text>班级类型：</text><text>{{data.course_people_num}}</text></view> -->
       <view><text>班级类型：</text><text>{{data.course_people_num}}</text></view>
       <view><text>上课地点：</text><text>{{data.lesson_place?data.lesson_place:'北京市区六环内'}}</text></view>
       <view><text>约课流程：</text><text>{{data.course_process}}</text>

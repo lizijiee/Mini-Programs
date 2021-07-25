@@ -237,6 +237,13 @@ Page({
     let info = app.globalData.orderinfo
     // info.lesson_place=info.lesson_place.substr(0,15)
     console.log(info)
+      if(parseInt(info.is_one) == 1){
+        this.setData({button:'确认购买'})
+      }
+    //     this.setData({button:'加入班级'})
+    //   }else if(options.types == 3){
+    //     this.setData({button:'购买'})
+    //   }
     info.coupon.map(a => {
       a.checked = false
     })

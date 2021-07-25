@@ -11,13 +11,13 @@
   <view class="main">
     <view class="left">
       <view wx:for="{{left}}" wx:key='index' bindtap="navto" data-id="{{item.id}}">
-        <text style="background-image:url({{item.img}});background-size:cover"></text>
+        <image src="{{item.img}}"></image>
         {{item.content}}
       </view>
     </view>
     <view class="right">
       <view wx:for="{{right}}" wx:key='index' bindtap="navto" data-id="{{item.id}}">
-        <text style="background-image:url({{item.img}});background-size:cover"></text>
+        <image src="{{item.img}}"></image>
         {{item.content}}
       </view>
     </view>
