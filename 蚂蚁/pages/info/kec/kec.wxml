@@ -4,7 +4,33 @@
   <van-tab title="待付款">
     <view class="woap" wx:if="{{!show}}">
       <scroll-view scroll-y class="{{show?'':'src'}}">
-        <view class="evs" wx:for="{{scrtop}}" wx:key='index' bindtap="deta" data-id="{{item.mylessonid}}">
+        <view class="joinlessonlist">
+          <view class="eve" wx:for="{{scrtop}}" wx:key='index' bindtap="deta" data-id="{{item.mylessonid}}">
+            <view class="ae">
+              <view class="left">
+                <image src="{{filter.url(item.course_pic)}}"></image>
+              </view>
+              <view class="right">
+                <view class="top">
+                  <text>{{item.course_name}}</text>
+                  <view>距离: <text>{{item.distance}}</text>KM</view>
+                </view>
+                <view class="place">{{item.lesson_place}}</view>
+                <!-- <view class="time">{{item.lessontime?item.lessontime:'暂定'}}</view> -->
+                <view class="time">
+                  <text>{{filter.selectYear(item.lessontime)}}</text>
+                  <image src="../../../image/icon/time.png"></image>
+                  <text>{{filter.selectTime(item.lessontime)}}</text>
+                </view>
+                <view class="botom">
+                  <text>{{item.course_age}}</text>
+                </view>
+              </view>
+            </view>
+
+          </view>
+        </view>
+        <!-- <view class="evs" wx:for="{{scrtop}}" wx:key='index'  wx:if="{{item.is_baoming == 0}}">
           <view class="img">
             <image src="{{filter.url(item.course_pic)}}"></image>
           </view>
@@ -20,10 +46,61 @@
                 <text>{{item.addtime}}</text>
               </view>
           </view>
-        </view>
+        </view> -->
       </scroll-view>
-
-      <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 0}}">
+      <view class="joinlessonlist">
+        <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 0}}">
+          <view class="ae">
+            <view class="left">
+              <image src="{{filter.url(item.course_pic)}}"></image>
+            </view>
+            <view class="right">
+              <view class="top">
+                <text>{{item.course_name}}</text>
+                <!-- <view>距离: <text>{{item.distance}}</text>KM</view> -->
+              </view>
+              <view class="place">{{item.lesson_place}}</view>
+              <!-- <view class="time">{{item.lessontime?item.lessontime:'暂定'}}</view> -->
+              <view class="time">
+                <text>{{item.lessontime?filter.selectYear(item.lessontime):''}}</text>
+                <image src="../../../image/icon/time.png"></image>
+                <text>{{item.lessontime?filter.selectTime(item.lessontime):''}}</text>
+                <text class="price">￥{{item.order_paid_in_total}}</text>
+              </view>
+              <view class="botom">
+                <view class="dfk" bindtap='qux' data-item="{{item}}">取消订单</view>
+                <view class="dfk" bindtap="submit" data-item="{{item}}">立即支付</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 1}}">
+          <view class="ae">
+            <view class="left">
+              <image src="{{filter.url(item.course_pic)}}"></image>
+            </view>
+            <view class="right">
+              <view class="top">
+                <text>{{item.course_name}}</text>
+                <!-- <view>距离: <text>{{item.distance}}</text>KM</view> -->
+              </view>
+              <view class="place">{{item.lesson_place}}</view>
+              <!-- <view class="time">{{item.lessontime?item.lessontime:'暂定'}}</view> -->
+              <view class="time">
+                <text>{{item.addtime?filter.selectYear(item.addtime):''}}</text>
+                <image src="../../../image/icon/time.png"></image>
+                <text>{{item.addtime?filter.selectTime(item.addtime):''}}</text>
+                <text class="price">￥{{item.order_paid_in_total}}</text>
+              </view>
+              <view class="botom">
+                <view class="dfk" bindtap='qux' data-item="{{item}}">取消订单</view>
+                <view class="dfk" bindtap="submit" data-item="{{item}}">立即支付</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 0}}">
         <view class="left">
           <image src="{{filter.url(item.course_pic)}}"></image>
         </view>
@@ -31,15 +108,15 @@
           <view class="top">
             <text>{{item.course_name}}</text>
           </view>
-          <view class="time"><text>{{item.lessontime?item.lessontime:''}}</text><text>￥{{item.order_paid_in_total}}</text></view>
+          <view class="time">
+            <text>{{item.lessontime?item.lessontime:''}}</text><text>￥{{item.order_paid_in_total}}</text></view>
           <view class="botom">
             <view class="dfk" bindtap='qux' data-item="{{item}}">取消订单</view>
             <view class="dfk" bindtap="submit" data-item="{{item}}">立即支付</view>
           </view>
         </view>
-      </view>
-
-      <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 1}}">
+      </view> -->
+      <!-- <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 1}}">
         <view class="left">
           <image src="{{filter.url(item.sign_pic)}}"></image>
         </view>
@@ -53,7 +130,7 @@
             <view class="dfk" bindtap="submit" data-item="{{item}}">立即支付</view>
           </view>
         </view>
-      </view>
+      </view> -->
 
 
     </view>
@@ -64,30 +141,102 @@
     </view>
   </van-tab>
   <van-tab title="待上课">
+    <view class="woap" wx:if="{{!show}}">
+      <scroll-view scroll-y class="{{show?'':'src'}}">
+        <view class="joinlessonlist">
+          <view class="eve" wx:for="{{scrtop}}" wx:key='index' bindtap="deta" data-id="{{item.mylessonid}}">
+            <view class="ae">
+              <view class="left">
+                <image src="{{filter.url(item.course_pic)}}"></image>
+              </view>
+              <view class="right">
+                <view class="top">
+                  <text>{{item.course_name}}</text>
+                  <view>距离: <text>{{item.distance}}</text>KM</view>
+                </view>
+                <view class="place">{{item.lesson_place}}</view>
+                <view class="botom">
+                  <text>{{item.lessontime}}</text>
+                  <text>{{item.course_name}}</text>
+                  <text>体验课</text>
+                  <text>{{item.addtime}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+      <view class="joinlessonlist">
+        <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 0}}">
+          <view class="ae">
+            <view class="left">
+              <image src="{{filter.url(item.course_pic)}}"></image>
+            </view>
+            <view class="right">
+              <view class="top">
+                <text>{{item.course_name}}</text>
+              </view>
+              <view class="place">{{item.lesson_place}}</view>
+              <view class="time">
+                <text>{{item.lessontime?filter.selectYear(item.lessontime):'等待分配上课时间'}}</text>
+                <image src="../../../image/icon/time.png"></image>
+                <text>{{item.lessontime?filter.selectTime(item.lessontime):''}}</text>
+              </view>
+              <view class="botom">
+                <text>{{item.course_age}}</text>
+                <text>{{item.course_name}}</text>
+                <text>{{item.course_people_num}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 1}}">
+          <view class="ae">
+            <view class="left">
+              <image src="{{filter.url(item.course_pic)}}"></image>
+            </view>
+            <view class="right">
+              <view class="top">
+                <text>{{item.course_name}}</text>
+              </view>
+              <view class="place">{{item.lesson_place}}</view>
+              <view class="time">
+                <text>{{item.lessontime?filter.selectYear(item.lessontime):'等待分配上课时间'}}</text>
+                <image src="../../../image/icon/time.png"></image>
+                <text>{{item.lessontime?filter.selectTime(item.lessontime):''}}</text>
+              </view>
+              <view class="botom">
+                <text>{{item.course_age}}</text>
+                <text>{{item.course_name}}</text>
+                <text>{{item.course_people_num}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
 
-
-  <view class="woap" wx:if="{{!show}}">
+    <!-- <view class="woap" wx:if="{{!show}}">
       <scroll-view scroll-y class="{{show?'':'src'}}">
         <view class="evs" wx:for="{{scrtop}}" wx:key='index' bindtap="deta" data-id="{{item.mylessonid}}">
           <view class="img">
             <image src="{{filter.url(item.course_pic)}}"></image>
           </view>
           <view class="xs">
-              <view class="tops">
-                <text class="tit">{{item.course_name}}</text>
-                <view>距离<text>{{item.distance}}</text>KM</view>
-              </view>
-              <view class="bom">
-                <text>{{item.lessontime}}</text>
-                <text>{{item.course_name}}</text>
-                <text>体验课</text>
-                <text>{{item.addtime}}</text>
-              </view>
+            <view class="tops">
+              <text class="tit">{{item.course_name}}</text>
+              <view>距离<text>{{item.distance}}</text>KM</view>
+            </view>
+            <view class="bom">
+              <text>{{item.lessontime}}</text>
+              <text>{{item.course_name}}</text>
+              <text>体验课</text>
+              <text>{{item.addtime}}</text>
+            </view>
           </view>
         </view>
-      </scroll-view>
-
-      <view class="eve" wx:for="{{list}}" wx:key='index'   wx:if="{{item.is_baoming == 0}}">
+      </scroll-view> 
+      <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 0}}">
         <view class="left">
           <image src="{{filter.url(item.course_pic)}}"></image>
         </view>
@@ -104,7 +253,7 @@
         </view>
       </view>
 
-      <view class="eve" wx:for="{{list}}" wx:key='index'  wx:if="{{item.is_baoming == 1}}">
+      <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 1}}">
         <view class="left">
           <image src="{{filter.url(item.sign_pic)}}"></image>
         </view>
@@ -118,10 +267,9 @@
             <text>{{item.sign_people_num}}</text>
           </view>
         </view>
-      </view>
-
-      
+      </view> 
     </view>
+    -->
     <view class="zanwu" wx:if="{{show}}">
       <image src="../../../image/user/zanwu.png"></image>
       <view class="ds">您还没有购买课程</view>
@@ -131,21 +279,78 @@
   <van-tab title="已完成">
     <view class="woap" wx:if="{{!show}}">
       <scroll-view scroll-y class="{{show?'':'src'}}">
+        <view class="joinlessonlist">
+          <view class="eve" wx:for="{{scrtop}}" wx:key='index' bindtap="deta" data-id="{{item.mylessonid}}">
+            <view class="ae">
+              <view class="left">
+                <image src="{{filter.url(item.course_pic)}}"></image>
+              </view>
+              <view class="right">
+                <view class="top">
+                  <text>{{item.course_name}}</text>
+                  <view>距离: <text>{{item.distance}}</text>KM</view>
+                </view>
+                <view class="place">{{item.lesson_place}}</view>
+                <view class="botom">
+                  <text>{{item.lessontime}}</text>
+                  <text>{{item.course_name}}</text>
+                  <text>体验课</text>
+                  <text>{{item.addtime}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+      <view class="joinlessonlist">
+        <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 0}}">
+          <view class="ae">
+            <view class="left">
+              <image src="{{filter.url(item.course_pic)}}"></image>
+            </view>
+            <view class="right">
+              <view class="top">
+                <text>{{item.course_name}}</text>
+              </view>
+              <view class="place">{{item.lesson_place}}</view>
+              <view class="time">
+                <text>{{item.lessontime?filter.selectYear(item.lessontime):'等待分配上课时间'}}</text>
+                <image src="../../../image/icon/time.png"></image>
+                <text>{{item.lessontime?filter.selectTime(item.lessontime):''}}</text>
+                <text class="price">￥{{item.order_paid_in_total}}</text>
+              </view>
+              <view class="botom">
+                <view class="dfk">已完成</view>
+                <view class="dfk" bindtap="estime" data-id="{{item.id}}" wx:if="{{item.is_comment == 0}}">评价</view>
+                <view class="dfk" wx:if="{{item.is_comment == 1}}">已评价</view>
+              </view>
+            </view>
+
+          </view>
+        </view>
+      </view>
+      <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 1}}">
+
+      </view>
+    </view>
+
+    <!-- <view class="woap" wx:if="{{!show}}">
+      <scroll-view scroll-y class="{{show?'':'src'}}">
         <view class="evs" wx:for="{{scrtop}}" wx:key='index' bindtap="deta" data-id="{{item.mylessonid}}">
           <view class="img">
             <image src="{{filter.url(item.course_pic)}}"></image>
           </view>
           <view class="xs">
-              <view class="tops">
-                <text class="tit">{{item.course_name}}</text>
-                <view>距离<text>{{item.distance}}</text>KM</view>
-              </view>
-              <view class="bom">
-                <text>{{item.lessontime}}</text>
-                <text>{{item.course_name}}</text>
-                <text>体验课</text>
-                <text>{{item.addtime}}</text>
-              </view>
+            <view class="tops">
+              <text class="tit">{{item.course_name}}</text>
+              <view>距离<text>{{item.distance}}</text>KM</view>
+            </view>
+            <view class="bom">
+              <text>{{item.lessontime}}</text>
+              <text>{{item.course_name}}</text>
+              <text>体验课</text>
+              <text>{{item.addtime}}</text>
+            </view>
           </view>
         </view>
       </scroll-view>
@@ -158,17 +363,20 @@
           <view class="top">
             <text>{{item.course_name}}</text>
           </view>
-          <view class="time"><text>{{item.lesson_time?item.lesson_time:''}}</text><text>￥{{item.course_present_price}}</text></view>
+          <view class="time">
+            <text>{{item.lesson_time?item.lesson_time:''}}</text><text>￥{{item.course_present_price}}</text>
+          </view>
           <view class="botom">
             <view class="dfka">已完成</view>
-            <view class="dfkb" bindtap="estime" data-id="{{item.list_lesson_id}}" wx:if="{{item.is_comment == 0}}">评价</view>
+            <view class="dfkb" bindtap="estime" data-id="{{item.list_lesson_id}}" wx:if="{{item.is_comment == 0}}">评价
+            </view>
             <view class="dfkb" wx:if="{{item.is_comment == 1}}">已评价</view>
           </view>
         </view>
       </view>
 
 
-       <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 1}}">
+      <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 1}}">
         <view class="left">
           <image src="{{filter.url(item.sign_pic)}}"></image>
         </view>
@@ -184,7 +392,7 @@
           </view>
         </view>
       </view>
-    </view>
+    </view> -->
     <view class="zanwu" wx:if="{{show}}">
       <image src="../../../image/user/zanwu.png"></image>
       <view class="ds">您还没有购买课程</view>
@@ -192,4 +400,3 @@
     </view>
   </van-tab>
 </van-tabs>
-

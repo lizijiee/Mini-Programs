@@ -243,9 +243,10 @@ Page({
         "code": 0,
         "descrip": "我的课程信息获取成功"
       }
+      console.log('res.data.my_lesson',res.data.recommend)
       this.setData({
-        list: test.data.my_lesson,
-        scrtop: test.data.recommend
+        list: res.data.my_lesson,
+        scrtop: res.data.recommend
       })
     })
   },

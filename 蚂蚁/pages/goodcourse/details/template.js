@@ -6,7 +6,7 @@ var template = function(image){
     "views": [
     {
       "type": "image",
-      "url": "/image/user/qrcode.png",
+      "url": "/public/uploads/20210627/0b9f6d9d154c55b71a78be9d40b9e426.png",
       "css": {
         "width": "700px",
         "height": "900px",

@@ -53,7 +53,7 @@ Page({
     datetime: '', //上课日期
     datetimes: false, //日期选择
     currentDate: new Date().getTime(),
-    minDate: new Date(new Date(new Date().getTime()).getTime() + 86400000 * 3).getTime(),
+    minDate: new Date(new Date(new Date().getTime()).getTime() + 86400000 * 1).getTime(),
     formatter(type, value) {
       if (type === 'year') {
         return `${value}年`;

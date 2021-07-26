@@ -27,16 +27,23 @@ Page({
 
   onImgOK: function (e) {
     console.log('e图片信息查看', e);
-    
-    this.setData({
-      url: e.detail.path
-      // url: 'https://myxqty.com/public/uploads/20210627/0b9f6d9d154c55b71a78be9d40b9e426.png'
+    http.get('/indexinterface/erweima_return').then(res => {
+      console.log(res)
+      this.setData({
+        url: 'https://myxqty.com' + res.data.erweima_pic
+      })
     })
+    /* 
+     this.setData({
+       url: e.detail.path  xx/details/template.js 文件中url引入本地图片
+       // url: 'https://myxqty.com/public/uploads/20210627/0b9f6d9d154c55b71a78be9d40b9e426.png'
+     })
+      */
   },
   gohaibao() {
     let user = wx.getStorageSync('user')
     if (user) {
-      console.log(this.data)
+      console.log('data:', this.data)
       wx.previewImage({
         current: this.data.url,
         urls: [this.data.url],
@@ -89,7 +96,7 @@ Page({
       console.log(res)
       wx.hideLoading()
       let attr = res.data.course_attribute.split('/')
-      console.log('attr',attr)
+      console.log('attr', attr)
 
       // let img = res.data.course_pics.split(',')
       // let index =  img.findIndex(item=>{
@@ -100,7 +107,7 @@ Page({
         a.yes = '../../../image/icon/yes.png',
           a.no = '../../../image/icon/no.png'
       })
-      console.log(2)
+      console.log(2);
 
       this.getselect(res.data.age[0].id)
       this.setData({
@@ -193,6 +200,7 @@ Page({
     })
   },
   getcode(id) {
+
     let _this = this
     http.post('/wxinterface/qr_code', {
       lesson_id: id ? id : ''
@@ -233,7 +241,6 @@ Page({
       })
     }
     this.getdeta(options.id)
-
   },
 
   /**

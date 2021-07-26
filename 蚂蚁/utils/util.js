@@ -24,6 +24,7 @@ function Format(da, fmt) {
     's+': _this.getSeconds(),
     'S+': _this.getMilliseconds()
   }
+  console.log(o)
   // 因为date.getFullYear()出来的结果是number类型的,所以为了让结果变成字符串型，下面有两种方法：
   if (/(y+)/.test(fmt)) {
     // 第一种：利用字符串连接符“+”给date.getFullYear()+""，加一个空字符串便可以将number类型转换成字符串。
@@ -41,6 +42,7 @@ function Format(da, fmt) {
       )
     }
   }
+  console.log('fmt:',fmt)
   return fmt
 }
 
