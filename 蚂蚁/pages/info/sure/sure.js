@@ -9,6 +9,7 @@ Page({
   data: {
     info: [], //确认购买信息
     show: false,
+    course_pic:'', //头像
     value: '', //input
     coupshow: false, //优惠券是否显示
     pirce: '', //金钱价格
@@ -233,12 +234,17 @@ Page({
         button: '加入班级'
       })
     }
+    if (options.course_pic) {
+      this.setData({
+        course_pic: options.course_pic
+      })
+    }
 
     let info = app.globalData.orderinfo
     // info.lesson_place=info.lesson_place.substr(0,15)
     console.log(info)
-      if(parseInt(info.is_one) == 1){
-        this.setData({button:'确认购买'})
+      if(info.classtype ==  "1-1私教课"){
+        this.setData({button:'购买课程'})
       }
     //     this.setData({button:'加入班级'})
     //   }else if(options.types == 3){

@@ -12,6 +12,7 @@ Page({
    */
   data: {
     xianm: '', //课程项目
+    course_pic:'', // 课程头像
     ages: '', //年龄范围
     banj: '', //班级类型
     classtype: '2', //购买选项班级类型
@@ -390,11 +391,11 @@ Page({
         }).then(res => {
           wx.hideLoading({})
           if (res.code == 0) {
-            console.log('拼课成功')
+            console.log('拼课成功', this.data)
             app.globalData.orderinfo = res.data
             wx.navigateTo({
               // url: '.nfo/sure/sure?types=3',
-              url: '../sure/sure?types=3'
+              url: '../sure/sure?types=3&course_pic='+ this.data.course_pic
             })
           } else {
             wx.showToast({
@@ -414,14 +415,16 @@ Page({
     const {
       data
     } = JSON.parse(options.classdetail);
-    console.log('datadata', options.classdetail, data)
+    // console.log('datadata', options.classdetail, data)
     this.setData({
       ages: data.course_age,
       agestype: [data.course_age],
       xianm: data.course_name,
       ximtype: [data.course_name],
-      x1id:data.coursecate_id
+      x1id:data.coursecate_id,
+      course_pic:data.course_pic
     })
+    console.log('options',options)
     this.getkec(options.id)
     this.getdata()
   },

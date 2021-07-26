@@ -21,7 +21,7 @@
   </view>
   <!-- 儿童信息 -->
   <view class="patriarch">
-    <view class="title">儿童信息</view>
+    <view class="title">学员信息</view>
     <view class="xinx">
         <text>姓名</text>
         <input type="text" placeholder="请输入真实姓名" bindinput="name" 
@@ -33,7 +33,7 @@
         value="{{idnumber}}"/>
     </view>
     <view class="xinx">
-        <text>孩子性别</text>
+        <text>学员性别</text>
         <input type="text" placeholder="请输入性别" bindinput="age" 
         value="{{age}}"/>
     </view>

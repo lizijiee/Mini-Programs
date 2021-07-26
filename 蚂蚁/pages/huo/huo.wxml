@@ -11,8 +11,8 @@
       <!-- title -->
       <view class="titles">{{data.sign_name}}</view>
       <!-- 价格 -->
-      <!-- <view class="picre">￥<text>{{data.sign_price}}</text><text>原价格{{data.sign_price?data.sign_price:''}}</text></view> -->
-      <view class="picre">￥<text>{{data.sign_price}}</text></view>
+      <view class="picre">￥<text>{{data.sign_price}}</text><text>原价格{{data.sign_price?data.sign_price:''}}</text></view>
+      <!-- <view class="picre">￥<text>{{data.sign_price}}</text></view> -->
     </view>
     <view class="lars">
       <!-- 详情说明 -->

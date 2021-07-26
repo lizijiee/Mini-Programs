@@ -4,7 +4,8 @@
   <!-- 信息 -->
   <view class="main">
     <view class="left">
-      <open-data type="userAvatarUrl"></open-data>
+    <image src="{{filter.url(course_pic)}}"></image>
+      <!-- <open-data type="userAvatarUrl"></open-data> -->
     </view>
     <view class="right">
       <view class="title">{{info.course_name}}</view>

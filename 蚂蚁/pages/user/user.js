@@ -10,7 +10,7 @@ Page({
     user:[],//个人信息
     show:false,//是否登录
     list:[//信息列表
-      {name:'我的课程',icon:'../../image/user/myke.png',to:'../info/kec/kec'},
+      {name:'课程订单',icon:'../../image/user/myke.png',to:'../info/kec/kec'},
       // {name:'地址管理',icon:'../../image/user/address.png',to:'../info/resslist/resslist'},
       {name:'体测报告',icon:'../../image/user/bg.png',to:'../info/baog/baog'},
       {name:'服务合同',icon:'../../image/user/hetong.png',to:'../info/heto/heto'},

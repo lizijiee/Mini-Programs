@@ -10,7 +10,8 @@
     <view class="titles">{{data.course_name}}</view>
     <!-- 价格 -->
     <view class="picre">
-      ￥<text>{{data.course_present_price}}</text><text>/{{data.course_lesson_num?data.course_lesson_num:'12次课'}}</text>
+          <!-- <view class="picre">￥<text>{{data.course_present_price}}</text><text>原价格{{data.course_original_price?data.course_original_price:''}}</text></view> -->
+      ￥<text>{{data.course_present_price}}</text><text>原价格{{data.course_original_price?data.course_original_price:''}}</text><text>/{{data.course_lesson_num?data.course_lesson_num:'12次课'}}</text>
     </view>
     <!-- 说明 -->
     <view class="make">

@@ -39,10 +39,10 @@
   color: #F81111;
   font-size: 30rpx
 }
-
 .picre text:nth-child(2) {
   font-size: 22rpx;
   padding-left: 15rpx;
+  text-decoration: line-through;
 }
 
 .make {
