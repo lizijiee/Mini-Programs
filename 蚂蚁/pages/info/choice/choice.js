@@ -312,7 +312,7 @@ Page({
         ds: res.data,
         xianm: res.data.course_name
       })
-      this.getaxe(res.data.coursecate_id)
+      this.getaxe(res.data.coursecate_id) // 原有1v1逻辑
     })
   },
   // 获取nianling
@@ -415,7 +415,8 @@ Page({
     const {
       data
     } = JSON.parse(options.classdetail);
-    // console.log('datadata', options.classdetail, data)
+    // console.log('datadata', options.classdetail, data,'data.course_age',data.course_name)
+    console.log('data.course_name',data)
     this.setData({
       ages: data.course_age,
       agestype: [data.course_age],
@@ -424,8 +425,9 @@ Page({
       x1id:data.coursecate_id,
       course_pic:data.course_pic
     })
-    console.log('options',options)
-    this.getkec(options.id)
+    // console.log('options',options)
+    this.getkec(options.id);
+    this.getaxe(data.coursecate_id);
     this.getdata()
   },
 

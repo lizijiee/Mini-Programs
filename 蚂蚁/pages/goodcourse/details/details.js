@@ -69,7 +69,7 @@ Page({
   },
   //获取详情图
   getselect(id) {
-    console.log(3)
+    console.log(3,'id',id)
     http.get('/indexinterface/age_select', {
       id
     }).then(res => {

@@ -43,23 +43,23 @@ Page({
         src:'../../image/icon/icon_skip.png'
       },
       {
-        id:5,
+        id:12,
         name:'体适能',
         src:'../../image/icon/icon_tishineng.png'
       },
       {
         id:8,
-        name:'小体适能',
+        name:'小体达标',
         src:'../../image/icon/icon_xiaotidabiao.png'
       },
       {
         id:10,
-        name:'中体适能',
+        name:'中体达标',
         src:'../../image/icon/icon_zhongtidabiao.png'
       },
       {
         id:6,
-        name:'武道三项',
+        name:'武道专项',
         src:'../../image/icon/icon_wudaosanxiang.png'
       },
       {
