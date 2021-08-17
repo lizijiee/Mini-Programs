@@ -156,7 +156,7 @@ Page({
         current: this.data.url,
         urls: [this.data.url],
         complete(e) {
-            console.log(e)
+            console.log('eeeeeeee',e)
         }
       })
     }else{
