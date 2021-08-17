@@ -76,6 +76,7 @@
   width: 40%;
   height: 96rpx;
   display: flex;
+  margin-left: 20rpx;
   align-items: center;
   justify-content: center;
 }

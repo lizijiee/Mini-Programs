@@ -30,23 +30,6 @@
 
           </view>
         </view>
-        <!-- <view class="evs" wx:for="{{scrtop}}" wx:key='index'  wx:if="{{item.is_baoming == 0}}">
-          <view class="img">
-            <image src="{{filter.url(item.course_pic)}}"></image>
-          </view>
-          <view class="xs">
-              <view class="tops">
-                <text class="tit">{{item.course_name}}</text>
-                <view>距离<text>{{item.distance}}</text>KM</view>
-              </view>
-              <view class="bom">
-                <text>{{item.lessontime}}</text>
-                <text>{{item.course_name}}</text>
-                <text>体验课</text>
-                <text>{{item.addtime}}</text>
-              </view>
-          </view>
-        </view> -->
       </scroll-view>
       <view class="joinlessonlist">
         <view class="eve" wx:for="{{list}}" wx:key='index' wx:if="{{item.is_baoming == 0}}">

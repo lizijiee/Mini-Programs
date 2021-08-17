@@ -20,6 +20,7 @@
     <view class="headimg">
       <open-data type="userAvatarUrl"></open-data>
     </view>
+    
     <!-- 登记名称 -->
     <view class="name">
       <text wx:if="{{!show}}">{{user.nickname}}</text>

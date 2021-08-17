@@ -136,9 +136,19 @@ Page({
     })
   },
   onImgOK: function(e) {
-    this.setData({
-      url: e.detail.path
+    console.log('e图片信息查看', e);
+    http.get('/indexinterface/erweima_return').then(res => {
+      console.log(res)
+      this.setData({
+        url: 'https://myxqty.com' + res.data.erweima_pic
+      })
     })
+    /* 
+     this.setData({
+       url: e.detail.path  xx/details/template.js 文件中url引入本地图片
+       // url: 'https://myxqty.com/public/uploads/20210627/0b9f6d9d154c55b71a78be9d40b9e426.png'
+     })
+      */
   },
   gohaibao() {
     if(!this.data.show){

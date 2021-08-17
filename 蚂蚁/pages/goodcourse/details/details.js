@@ -43,7 +43,6 @@ Page({
   gohaibao() {
     let user = wx.getStorageSync('user')
     if (user) {
-      console.log('data:', this.data)
       wx.previewImage({
         current: this.data.url,
         urls: [this.data.url],

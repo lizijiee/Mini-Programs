@@ -178,7 +178,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let user = wx.getStorageSync('user')
+    let user = wx.getStorageSync('user');
+    console.log('user----------',user)
     if(user.parent_phone){
       this.setData({
         phone:user.parent_phone,
